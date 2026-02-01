@@ -1,0 +1,49 @@
+# Log files
+*.log
+php/download_log*.txt
+php/submissions.log
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
+# Environment files
+.env
+.env.local
+config.local.php
+
+# Backup files
+*.backup
+*.old
+
+# Node modules (if using npm)
+node_modules/
+package-lock.json
+
+# Cache files
+*.cache
+.cache/
+
+# Upload directories (if any)
+uploads/
+temp/
