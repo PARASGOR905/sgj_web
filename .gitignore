@@ -47,3 +47,7 @@ package-lock.json
 # Upload directories (if any)
 uploads/
 temp/
+php/ 
+sql/ 
+*.log 
+.env 
