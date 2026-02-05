@@ -1,7 +1,7 @@
 // SGJ Institute Layout JavaScript File
 // Handles header/footer loading and layout functionality
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     loadHeader();
     loadFooter();
     initializeLayoutComponents();
@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
 function loadHeader() {
     const headerPlaceholder = document.getElementById('header-placeholder');
     if (!headerPlaceholder) return;
+    // Prevent double-injection if called multiple times
+    if (headerPlaceholder.dataset.loaded === 'true') return;
 
     // Determine path prefix based on current location
     const pathPrefix = window.location.pathname.includes('/courses/') ? '../' : './';
@@ -23,15 +25,24 @@ function loadHeader() {
     header.style.color = 'white';
     
     header.innerHTML = `
-        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
             <!-- Logo -->
             <div class="flex items-center gap-4">
-                <div class="bg-[--accent] text-[--primary] font-bold px-2.5 py-1.5 rounded" style="background-color: #E6C200 !important;">
-                    SGJ
+                <!-- SGJ Institute Logo -->
+                <div class="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-lg shadow-sm flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 sm:w-8 sm:h-8 text-[#0B3C5D]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <!-- Academic Cap -->
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                    <!-- Book -->
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                  </svg>
                 </div>
-                <span class="font-semibold text-white" style="color: white !important;">
-                    SGJ Institute of Management & IT
-                </span>
+                <div class="leading-tight">
+                  <span class="block font-bold text-white text-base sm:text-lg whitespace-nowrap">SGJ Institute</span>
+                  <span class="hidden sm:block text-xs sm:text-sm text-[#FFC107]">Management &amp; IT</span>
+                </div>
             </div>
 
             <!-- Mobile menu button -->
@@ -42,16 +53,24 @@ function loadHeader() {
             </button>
 
             <!-- Nav -->
-            <nav id="main-nav" class="md:flex items-center gap-8 text-white font-medium hidden" role="navigation" aria-label="Main navigation" style="color: white !important; fill: white !important;">
-                <a href="${pathPrefix}index.html" class="nav-link text-[--accent] hover:text-white transition duration-300 px-3 py-2 rounded-lg hover:bg-[--accent]/30" style="color: var(--accent) !important;">Home</a>
-                <a href="${pathPrefix}about.html" class="nav-link text-[--accent] hover:text-white transition duration-300 px-3 py-2 rounded-lg hover:bg-[--accent]/30" style="color: var(--accent) !important;">About</a>
-                <a href="${pathPrefix}gallery.html" class="nav-link text-[--accent] hover:text-white transition duration-300 px-3 py-2 rounded-lg hover:bg-[--accent]/30" style="color: var(--accent) !important;">Gallery</a>
-                <a href="${pathPrefix}downloads.html" class="nav-link text-[--accent] hover:text-white transition duration-300 px-3 py-2 rounded-lg hover:bg-[--accent]/30" style="color: var(--accent) !important;">Downloads</a>
+            <nav id="main-nav" class="md:flex items-center gap-6 text-white font-medium hidden flex-col md:flex-row absolute md:static top-full left-0 w-full md:w-auto bg-[var(--primary)] md:bg-transparent px-4 pb-4 md:px-0 md:pb-0 space-y-2 md:space-y-0" role="navigation" aria-label="Main navigation" style="color: white !important; fill: white !important;">
+                <a href="${pathPrefix}index.html" class="nav-link text-[--accent] hover:text-white transition duration-300 px-3 py-2 rounded-lg hover:bg-[--accent]/30 w-full md:w-auto" style="color: var(--accent) !important;">Home</a>
+                <a href="${pathPrefix}about.html" class="nav-link text-[--accent] hover:text-white transition duration-300 px-3 py-2 rounded-lg hover:bg-[--accent]/30 w-full md:w-auto" style="color: var(--accent) !important;">About</a>
+                <a href="${pathPrefix}gallery.html" class="nav-link text-[--accent] hover:text-white transition duration-300 px-3 py-2 rounded-lg hover:bg-[--accent]/30 w-full md:w-auto" style="color: var(--accent) !important;">Gallery</a>
+                <a href="${pathPrefix}downloads.html" class="nav-link text-[--accent] hover:text-white transition duration-300 px-3 py-2 rounded-lg hover:bg-[--accent]/30 w-full md:w-auto" style="color: var(--accent) !important;">Downloads</a>
+                <!-- Mobile Apply Now inside menu -->
+                <a href="${pathPrefix}contact.html"
+                   class="md:hidden mt-2 w-full text-center font-semibold rounded-lg"
+                   style="background: linear-gradient(135deg, var(--accent) 0%, #E6C200 100%) !important; color: var(--primary) !important; padding: 0.5rem 1rem;">
+                    Apply Now
+                </a>
             </nav>
 
-            <div class="flex items-center ml-4">
+            <!-- Desktop Apply Now button -->
+            <div class="hidden md:flex items-center ml-4 flex-shrink-0">
                 <a href="${pathPrefix}contact.html"
-                   class="btn-header py-2.5 px-5 rounded-lg text-white font-semibold transition-all duration-300 hover:brightness-110 hover:scale-105 shadow-lg" style="color: white !important; filter: brightness(1.15) !important; background: linear-gradient(135deg, var(--accent) 0%, #E6C200 100%) !important;">
+                   class="btn-header font-semibold transition-all duration-300 hover:scale-105 shadow-lg whitespace-nowrap"
+                   style="background: linear-gradient(135deg, var(--accent) 0%, #E6C200 100%) !important; color: var(--primary) !important; padding: 0.625rem 1.5rem; border-radius: 0.5rem;">
                     Apply Now
                 </a>
             </div>
@@ -59,6 +78,7 @@ function loadHeader() {
     `;
     
     headerPlaceholder.appendChild(header);
+    headerPlaceholder.dataset.loaded = 'true';
     
     // Initialize header functionality
     initializeHeaderFunctionality();
@@ -68,6 +88,8 @@ function loadHeader() {
 function loadFooter() {
     const footerPlaceholder = document.getElementById('footer-placeholder');
     if (!footerPlaceholder) return;
+    // Prevent double-injection if called multiple times
+    if (footerPlaceholder.dataset.loaded === 'true') return;
 
     // Determine path prefix based on current location
     const pathPrefix = window.location.pathname.includes('/courses/') ? '../' : './';
@@ -131,6 +153,7 @@ function loadFooter() {
     `;
     
     footerPlaceholder.appendChild(footer);
+    footerPlaceholder.dataset.loaded = 'true';
     
     // Initialize footer functionality
     initializeFooterFunctionality();

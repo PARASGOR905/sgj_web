@@ -15,7 +15,7 @@ if (!isset($_SESSION['csrf_token'])) {
 }
 
 // Regenerate token every hour for security
-if (!isset($_SESSION['csrf_token_time']) || (time() - $_SESSION['csrf_token_time']) > 3600) {
+// // if (!isset($_SESSION['csrf_token_time']) || (time() - $_SESSION['csrf_token_time']) > 3600) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
     $_SESSION['csrf_token_time'] = time();
 }
