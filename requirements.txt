@@ -1,0 +1,3 @@
+# Requirements for SGJ Institute Website Automation Testing
+selenium>=4.0.0
+requests>=2.25.0

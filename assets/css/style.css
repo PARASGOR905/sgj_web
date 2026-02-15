@@ -124,6 +124,8 @@ p {
   border: none;
   font-weight: 600;
   transition: all 0.3s ease;
+  padding: 0.625rem 1.5rem;
+  border-radius: 0.5rem;
 }
 
 .btn-header:hover {
@@ -153,6 +155,84 @@ p {
   width: 100%;
 }
 
+/* Header Navigation Mobile Styles */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header.simple-theme {
+  background-color: var(--primary);
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* Mobile menu styles */
+#main-nav.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--primary);
+  display: flex;
+  flex-direction: column;
+  padding: 6rem 2rem 2rem;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+#main-nav.mobile-menu.active {
+  transform: translateX(0);
+}
+
+#main-nav.mobile-menu a {
+  display: block;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  text-align: center;
+  font-size: 1.25rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--accent);
+}
+
+#main-nav.mobile-menu a:hover {
+  background: var(--accent);
+  color: var(--primary);
+}
+
+/* Mobile menu overlay */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+.menu-overlay.active {
+  display: block;
+}
+
+/* Close button for mobile menu */
+.mobile-menu-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
 /* Hero Section */
 .hero-section {
   min-height: 500px;
@@ -161,6 +241,7 @@ p {
   justify-content: center;
   position: relative;
   overflow: hidden;
+  padding: 4rem 1rem;
 }
 
 .hero-section::before {
@@ -257,20 +338,227 @@ p {
   margin: 0 auto;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Mobile First Responsive Design */
+/* Extra small devices (phones, 576px and down) */
+@media (max-width: 575.98px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+  
+  h1 { 
+    font-size: 1.75rem; 
+    line-height: 1.2;
+  }
+  
+  h2 { 
+    font-size: 1.5rem; 
+    line-height: 1.25;
+  }
+  
+  h3 { 
+    font-size: 1.25rem; 
+    line-height: 1.3;
+  }
+  
+  .hero-section {
+    min-height: 350px;
+    padding: 2rem 0.75rem;
+    text-align: center;
+  }
+  
+  .hero-section h1 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-section p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .btn-primary:last-child, .btn-secondary:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Header mobile adjustments */
+  header .max-w-7xl {
+    padding: 0.75rem 1rem;
+  }
+  
+  header .gap-4 {
+    gap: 0.75rem;
+  }
+  
+  /* Program cards mobile layout */
+  .program-card {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem !important;
+  }
+  
+  .program-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  /* Features section mobile */
+  .flex.items-center.gap-3 {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 0.75rem;
+  }
+  
+  .flex.items-center.gap-3 .bg-blue-100 {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 0.75rem;
+  }
+  
+  .flex.items-center.gap-3 span {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  /* Info slider mobile */
+  .info-slider {
+    height: 40px;
+    padding: 0.5rem 0;
+  }
+  
+  .info-track span {
+    font-size: 0.875rem;
+    padding: 0 1rem;
+    font-weight: 500;
+  }
+  
+  /* Back to top button mobile */
+  .back-to-top {
+    width: 2.5rem;
+    height: 2.5rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+  
+  .back-to-top svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
   h1 { font-size: 2rem; }
   h2 { font-size: 1.75rem; }
   h3 { font-size: 1.5rem; }
   
   .hero-section {
     min-height: 400px;
-    padding: 2rem 0;
+    padding: 2.5rem 1rem;
   }
   
   .btn-primary, .btn-secondary {
-    padding: 0.625rem 1.25rem;
-    font-size: 0.875rem;
+    padding: 0.625rem 1.5rem;
+    font-size: 0.9375rem;
+  }
+  
+  /* Header adjustments */
+  header .max-w-7xl {
+    padding: 1rem 1.5rem;
+  }
+  
+  /* Two column layout for features */
+  .flex.items-center.gap-3 {
+    width: 48%;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  h1 { font-size: 2.25rem; }
+  h2 { font-size: 1.875rem; }
+  h3 { font-size: 1.625rem; }
+  
+  .hero-section {
+    min-height: 450px;
+    padding: 3rem 1.5rem;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 0.75rem 1.75rem;
+    font-size: 1rem;
+  }
+  
+  /* Header adjustments */
+  header .max-w-7xl {
+    padding: 1rem 2rem;
+  }
+  
+  /* Three column layout for features */
+  .flex.items-center.gap-3 {
+    width: 48%;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    padding: 0 2rem;
+  }
+  
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.75rem; }
+  
+  .hero-section {
+    min-height: 500px;
+    padding: 4rem 2rem;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 0.75rem 2rem;
+    font-size: 1.125rem;
+  }
+  
+  /* Header desktop */
+  header .max-w-7xl {
+    padding: 1rem 2.5rem;
+  }
+  
+  /* Full feature layout */
+  .flex.items-center.gap-3 {
+    width: auto;
+    margin-bottom: 0;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1300px;
+    padding: 0 2.5rem;
+  }
+  
+  .hero-section {
+    min-height: 600px;
+  }
+  
+  header .max-w-7xl {
+    padding: 1rem 3rem;
   }
 }
 
@@ -321,6 +609,18 @@ p {
   body {
     background-color: var(--bg-light);
     color: var(--text-primary);
+  }
+  
+  .flex.items-center.gap-3 {
+    background: rgba(255, 255, 255, 0.1) !important;
+  }
+  
+  #main-nav.mobile-menu {
+    background: var(--bg-dark);
+  }
+  
+  #main-nav.mobile-menu a {
+    background: rgba(255, 255, 255, 0.1);
   }
 }
 

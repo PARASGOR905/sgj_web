@@ -21,7 +21,7 @@ Thumbs.db
 # OS files
 .DS_Store
 .DS_Store?
-._*
+._
 .Spotlight-V100
 .Trashes
 ehthumbs.db
@@ -47,7 +47,9 @@ package-lock.json
 # Upload directories (if any)
 uploads/
 temp/
-php/ 
-sql/ 
-*.log 
-.env 
+
+# Sensitive files (keep configurations but exclude sensitive data)
+# php/           # Commented out - we want PHP files in repo
+# sql/           # Commented out - we want SQL files in repo
+# *.log         # Commented out - keep log patterns but not actual logs
+# .env          # Commented out - keep .env patterns but not actual .env files

@@ -18,20 +18,95 @@ function initializeNavigation() {
     const mainNav = document.getElementById('main-nav');
     
     if (mobileMenuBtn && mainNav) {
+        // Add mobile menu class for styling
+        mainNav.classList.add('mobile-menu');
+        
         mobileMenuBtn.addEventListener('click', function() {
-            mainNav.classList.toggle('hidden');
-            const isOpen = !mainNav.classList.contains('hidden');
-            mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+            toggleMobileMenu();
+        });
+        
+        // Add close button to mobile menu
+        const closeBtn = document.createElement('button');
+        closeBtn.className = 'mobile-menu-close';
+        closeBtn.innerHTML = '&times;';
+        closeBtn.setAttribute('aria-label', 'Close menu');
+        mainNav.appendChild(closeBtn);
+        
+        closeBtn.addEventListener('click', function() {
+            closeMobileMenu();
+        });
+        
+        // Add overlay
+        const overlay = document.createElement('div');
+        overlay.className = 'menu-overlay';
+        document.body.appendChild(overlay);
+        
+        overlay.addEventListener('click', function() {
+            closeMobileMenu();
         });
     }
     
     // Close mobile menu when clicking outside
     document.addEventListener('click', function(event) {
-        if (mainNav && !mainNav.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
-            mainNav.classList.add('hidden');
-            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        const mainNav = document.getElementById('main-nav');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        
+        if (mainNav && mobileMenuBtn && 
+            !mainNav.contains(event.target) && 
+            !mobileMenuBtn.contains(event.target) &&
+            mainNav.classList.contains('active')) {
+            closeMobileMenu();
         }
     });
+    
+    // Close menu on escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeMobileMenu();
+        }
+    });
+}
+
+function toggleMobileMenu() {
+    const mainNav = document.getElementById('main-nav');
+    const overlay = document.querySelector('.menu-overlay');
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    
+    if (mainNav && overlay && mobileMenuBtn) {
+        const isActive = mainNav.classList.contains('active');
+        
+        if (isActive) {
+            closeMobileMenu();
+        } else {
+            openMobileMenu();
+        }
+    }
+}
+
+function openMobileMenu() {
+    const mainNav = document.getElementById('main-nav');
+    const overlay = document.querySelector('.menu-overlay');
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    
+    if (mainNav && overlay && mobileMenuBtn) {
+        mainNav.classList.add('active');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        mobileMenuBtn.setAttribute('aria-expanded', 'true');
+    }
+}
+
+function closeMobileMenu() {
+    const mainNav = document.getElementById('main-nav');
+    const overlay = document.querySelector('.menu-overlay');
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    
+    if (mainNav && overlay && mobileMenuBtn) {
+        mainNav.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    }
 }
 
 // Animation Functions

@@ -1,0 +1,35 @@
+{
+  "name": "sgj-web-tests",
+  "version": "1.0.0",
+  "description": "Automated tests for SGJ Institute website",
+  "main": "test-runner.js",
+  "scripts": {
+    "test": "mocha tests/*.js --timeout 30000",
+    "test:structure": "mocha tests/test-structure.js --timeout 30000",
+    "test:functionality": "mocha tests/test-functionality.js --timeout 30000",
+    "test:forms": "mocha tests/test-forms.js --timeout 30000",
+    "test:security": "mocha tests/test-security.js --timeout 30000",
+    "test:all": "npm test",
+    "test:watch": "mocha tests/*.js --watch --timeout 30000",
+    "test:coverage": "nyc mocha tests/*.js --timeout 30000"
+  },
+  "keywords": [
+    "testing",
+    "automation",
+    "website",
+    "sgj",
+    "college"
+  ],
+  "author": "SGJ Institute Testing Team",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "puppeteer": "^21.0.0",
+    "nyc": "^15.1.0"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
