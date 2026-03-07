@@ -204,6 +204,22 @@ p {
 
 /* Mobile Navigation Fixes */
 @media (max-width: 768px) {
+  #mobile-menu-btn {
+    display: block !important;
+    position: relative;
+    z-index: 1001;
+    color: white !important;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  
+  #mobile-menu-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+  }
+  
   #main-nav {
     position: fixed;
     top: 0;
@@ -228,6 +244,14 @@ p {
     border-radius: 0.5rem;
     text-align: left;
     width: 100%;
+    color: var(--accent) !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  #main-nav a:hover {
+    background: rgba(255, 215, 0, 0.1);
+    color: white !important;
   }
   
   .mobile-menu-close {
