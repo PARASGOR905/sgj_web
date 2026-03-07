@@ -411,17 +411,44 @@ p {
 /* Info Slider */
 .info-slider {
   padding: 0.5rem 0;
+  overflow: hidden;
+}
+
+.info-track {
+  display: flex;
+  animation: slideText 15s linear infinite;
+  white-space: nowrap;
 }
 
 .info-track span {
   font-size: 0.9rem;
   padding: 0 1rem;
+  display: inline-block;
+}
+
+/* Slider Animation */
+@keyframes slideText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Pause animation on hover */
+.info-slider:hover .info-track {
+  animation-play-state: paused;
 }
 
 @media (max-width: 768px) {
   .info-track span {
     font-size: 0.8rem;
     padding: 0 0.75rem;
+  }
+  
+  .info-track {
+    animation-duration: 12s;
   }
 }
 
