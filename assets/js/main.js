@@ -2,7 +2,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all components
-    initializeNavigation();
     initializeAnimations();
     initializeFormValidation();
     initializeSmoothScrolling();
@@ -11,103 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load header and footer dynamically
     loadHeaderFooter();
 });
-
-// Navigation Functions
-function initializeNavigation() {
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mainNav = document.getElementById('main-nav');
-    
-    if (mobileMenuBtn && mainNav) {
-        // Add mobile menu class for styling
-        mainNav.classList.add('mobile-menu');
-        
-        mobileMenuBtn.addEventListener('click', function() {
-            toggleMobileMenu();
-        });
-        
-        // Add close button to mobile menu
-        const closeBtn = document.createElement('button');
-        closeBtn.className = 'mobile-menu-close';
-        closeBtn.innerHTML = '&times;';
-        closeBtn.setAttribute('aria-label', 'Close menu');
-        mainNav.appendChild(closeBtn);
-        
-        closeBtn.addEventListener('click', function() {
-            closeMobileMenu();
-        });
-        
-        // Add overlay
-        const overlay = document.createElement('div');
-        overlay.className = 'menu-overlay';
-        document.body.appendChild(overlay);
-        
-        overlay.addEventListener('click', function() {
-            closeMobileMenu();
-        });
-    }
-    
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-        const mainNav = document.getElementById('main-nav');
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        
-        if (mainNav && mobileMenuBtn && 
-            !mainNav.contains(event.target) && 
-            !mobileMenuBtn.contains(event.target) &&
-            mainNav.classList.contains('active')) {
-            closeMobileMenu();
-        }
-    });
-    
-    // Close menu on escape key
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape') {
-            closeMobileMenu();
-        }
-    });
-}
-
-function toggleMobileMenu() {
-    const mainNav = document.getElementById('main-nav');
-    const overlay = document.querySelector('.menu-overlay');
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    
-    if (mainNav && overlay && mobileMenuBtn) {
-        const isActive = mainNav.classList.contains('active');
-        
-        if (isActive) {
-            closeMobileMenu();
-        } else {
-            openMobileMenu();
-        }
-    }
-}
-
-function openMobileMenu() {
-    const mainNav = document.getElementById('main-nav');
-    const overlay = document.querySelector('.menu-overlay');
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    
-    if (mainNav && overlay && mobileMenuBtn) {
-        mainNav.classList.add('active');
-        overlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
-        mobileMenuBtn.setAttribute('aria-expanded', 'true');
-    }
-}
-
-function closeMobileMenu() {
-    const mainNav = document.getElementById('main-nav');
-    const overlay = document.querySelector('.menu-overlay');
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    
-    if (mainNav && overlay && mobileMenuBtn) {
-        mainNav.classList.remove('active');
-        overlay.classList.remove('active');
-        document.body.style.overflow = '';
-        mobileMenuBtn.setAttribute('aria-expanded', 'false');
-    }
-}
 
 // Animation Functions
 function initializeAnimations() {
@@ -275,46 +177,6 @@ function loadHeaderFooter() {
     if (footerPlaceholder) {
         // Footer loading would go here
         console.log('Footer placeholder found');
-    }
-}
-
-// Dark Mode Toggle
-function toggleDarkMode() {
-    const html = document.documentElement;
-    const isDark = html.classList.contains('dark');
-    
-    if (isDark) {
-        html.classList.remove('dark');
-        localStorage.setItem('darkMode', 'false');
-    } else {
-        html.classList.add('dark');
-        localStorage.setItem('darkMode', 'true');
-    }
-    
-    // Update toggle button icon
-    const toggleButton = document.getElementById('dark-mode-toggle');
-    if (toggleButton) {
-        const icon = toggleButton.querySelector('svg');
-        if (icon) {
-            icon.innerHTML = isDark ? 
-                '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>' :
-                '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>';
-        }
-    }
-}
-
-// Initialize Dark Mode
-function initializeDarkMode() {
-    const savedMode = localStorage.getItem('darkMode');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    if (savedMode === 'true' || (savedMode === null && prefersDark)) {
-        document.documentElement.classList.add('dark');
-    }
-    
-    const toggleButton = document.getElementById('dark-mode-toggle');
-    if (toggleButton) {
-        toggleButton.addEventListener('click', toggleDarkMode);
     }
 }
 

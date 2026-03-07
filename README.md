@@ -106,16 +106,28 @@ sgj_web/
 
 The following assets need to be added:
 
-1. **Favicon**: `favicon.ico` (root directory)
-2. **Logo**: `assets/images/logo.png`
-3. **Campus Image**: `assets/images/campus.jpg`
+1. **Favicon**: `favicon.ico` (root directory) - [Added placeholder file]
+2. **Logo**: `assets/images/logo.png` - [Added placeholder documentation]
+3. **Campus Image**: `assets/images/campus.jpg` - [Added placeholder documentation]
 4. **Gallery Images**: Add actual photos to gallery
+5. **Documentation Files**: PDFs and ZIP files in `assets/docs/` - [Added README with requirements]
 
 ## Development
 
-### Local Development
-- Use `http://localhost/sgj_web/` for local testing
-- Database credentials in `php/config.php` default to XAMPP defaults
+### Local Development (PHP/MySQL Project)
+
+**Primary Method - XAMPP:**
+1. Place project in `C:\xampp\htdocs\sgj_web`
+2. Start XAMPP Apache server
+3. Access via `http://localhost/sgj_web/`
+
+**Alternative Method - PHP Built-in Server:**
+```cmd
+# Navigate to project directory
+C:\xampp\php\php.exe -S localhost:8000
+```
+
+> **Note**: This is a PHP/MySQL project. Node.js is not required for production - it was only used for development convenience.
 
 ### Production Deployment
 1. Update `SITE_URL` in `php/config.php`
