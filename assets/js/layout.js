@@ -53,15 +53,14 @@ function loadHeader() {
             </button>
 
             <!-- Nav -->
-            <nav id="main-nav" class="md:flex items-center gap-6 text-white font-medium hidden flex-col md:flex-row absolute md:static top-full left-0 w-full md:w-auto bg-[var(--primary)] md:bg-transparent px-4 pb-4 md:px-0 md:pb-0 space-y-2 md:space-y-0" role="navigation" aria-label="Main navigation" style="color: white !important; fill: white !important;">
-                <a href="${pathPrefix}index.html" class="nav-link text-[--accent] hover:text-white transition duration-300 px-3 py-2 rounded-lg hover:bg-[--accent]/30 w-full md:w-auto" style="color: var(--accent) !important;">Home</a>
-                <a href="${pathPrefix}about.html" class="nav-link text-[--accent] hover:text-white transition duration-300 px-3 py-2 rounded-lg hover:bg-[--accent]/30 w-full md:w-auto" style="color: var(--accent) !important;">About</a>
-                <a href="${pathPrefix}gallery.html" class="nav-link text-[--accent] hover:text-white transition duration-300 px-3 py-2 rounded-lg hover:bg-[--accent]/30 w-full md:w-auto" style="color: var(--accent) !important;">Gallery</a>
-                <a href="${pathPrefix}downloads.html" class="nav-link text-[--accent] hover:text-white transition duration-300 px-3 py-2 rounded-lg hover:bg-[--accent]/30 w-full md:w-auto" style="color: var(--accent) !important;">Downloads</a>
+            <nav id="main-nav" class="md:flex items-center gap-6 text-white font-medium hidden flex-col md:flex-row absolute md:static top-full left-0 w-full md:w-auto bg-[var(--primary)] md:bg-transparent px-4 pb-4 md:px-0 md:pb-0 space-y-2 md:space-y-0" role="navigation" aria-label="Main navigation">
+                <a href="${pathPrefix}index.html" class="nav-link hover:text-white transition duration-300 px-3 py-2 rounded-lg hover:bg-[var(--accent)]/30 text-[var(--accent)]">Home</a>
+                <a href="${pathPrefix}about.html" class="nav-link hover:text-white transition duration-300 px-3 py-2 rounded-lg hover:bg-[var(--accent)]/30 text-[var(--accent)]">About</a>
+                <a href="${pathPrefix}gallery.html" class="nav-link hover:text-white transition duration-300 px-3 py-2 rounded-lg hover:bg-[var(--accent)]/30 text-[var(--accent)]">Gallery</a>
+                <a href="${pathPrefix}downloads.html" class="nav-link hover:text-white transition duration-300 px-3 py-2 rounded-lg hover:bg-[var(--accent)]/30 text-[var(--accent)]">Downloads</a>
                 <!-- Mobile Apply Now inside menu -->
                 <a href="${pathPrefix}contact.html"
-                   class="md:hidden mt-2 w-full text-center font-semibold rounded-lg"
-                   style="background: linear-gradient(135deg, var(--accent) 0%, #E6C200 100%) !important; color: var(--primary) !important; padding: 0.5rem 1rem;">
+                   class="md:hidden mt-2 w-full text-center font-semibold rounded-lg bg-[var(--accent)] text-[var(--primary)] p-2">
                     Apply Now
                 </a>
             </nav>
@@ -69,8 +68,7 @@ function loadHeader() {
             <!-- Desktop Apply Now button -->
             <div class="hidden md:flex items-center ml-4 flex-shrink-0">
                 <a href="${pathPrefix}contact.html"
-                   class="btn-header font-semibold transition-all duration-300 hover:scale-105 shadow-lg whitespace-nowrap"
-                   style="background: linear-gradient(135deg, var(--accent) 0%, #E6C200 100%) !important; color: var(--primary) !important; padding: 0.625rem 1.5rem; border-radius: 0.5rem;">
+                   class="btn-header font-semibold transition-all duration-300 hover:scale-105 shadow-lg whitespace-nowrap bg-[var(--accent)] text-[var(--primary)] p-2.5 rounded-lg">
                     Apply Now
                 </a>
             </div>
@@ -117,11 +115,11 @@ function loadFooter() {
             <div>
                 <h3 class="text-white font-semibold mb-3" style="color: white !important; font-weight: 600 !important;">Quick Links</h3>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="${pathPrefix}index.html" class="hover:text-[--accent]" style="color: #D1D5DB !important;">Home</a></li>
-                    <li><a href="${pathPrefix}about.html" class="hover:text-[--accent]" style="color: #D1D5DB !important;">About</a></li>
-                    <li><a href="${pathPrefix}gallery.html" class="hover:text-[--accent]" style="color: #D1D5DB !important;">Gallery</a></li>
-                    <li><a href="${pathPrefix}downloads.html" class="hover:text-[--accent]" style="color: #D1D5DB !important;">Downloads</a></li>
-                    <li><a href="${pathPrefix}contact.html" class="hover:text-[--accent]" style="color: #D1D5DB !important;">Contact</a></li>
+                    <li><a href="${pathPrefix}index.html" class="hover:text-[var(--accent)]" style="color: var(--text-light);">Home</a></li>
+                    <li><a href="${pathPrefix}about.html" class="hover:text-[var(--accent)]" style="color: var(--text-light);">About</a></li>
+                    <li><a href="${pathPrefix}gallery.html" class="hover:text-[var(--accent)]" style="color: var(--text-light);">Gallery</a></li>
+                    <li><a href="${pathPrefix}downloads.html" class="hover:text-[var(--accent)]" style="color: var(--text-light);">Downloads</a></li>
+                    <li><a href="${pathPrefix}contact.html" class="hover:text-[var(--accent)]" style="color: var(--text-light);">Contact</a></li>
                 </ul>
             </div>
 
