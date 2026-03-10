@@ -5,8 +5,8 @@
 // Database Configuration
 define('DB_HOST', getenv('DB_HOST') ?: 'localhost');
 define('DB_NAME', getenv('DB_NAME') ?: 'sgj_college');
-define('DB_USER', getenv('DB_USER') ?: 'root');
-define('DB_PASS', getenv('DB_PASS') ?: '');
+define('DB_USER', getenv('DB_USER') ?: 'sgj_user');
+define('DB_PASS', getenv('DB_PASS') ?: 'sgjpassword123');
 
 // Site Configuration
 define('SITE_URL', getenv('SITE_URL') ?: 'https://sgjcollege.in');
