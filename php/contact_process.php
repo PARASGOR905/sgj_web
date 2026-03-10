@@ -2,6 +2,9 @@
 // SGJ Institute Contact Form Processing
 // Handle form submissions securely
 
+// Start session for CSRF and rate limiting
+session_start();
+
 // Load configuration
 require_once __DIR__ . '/config.php';
 
@@ -36,7 +39,6 @@ if ($is_allowed && !empty($origin)) {
 }
 
 // Rate limiting - prevent spam
-session_start();
 if (!isset($_SESSION['last_submission'])) {
     $_SESSION['last_submission'] = 0;
 }
@@ -115,7 +117,7 @@ if (!empty($errors)) {
     exit;
 }
 
-// Process the form (save to database, send email, etc.)
+// Process the form
 try {
     // Include database connection
     require_once 'db_connect.php';
@@ -143,6 +145,9 @@ try {
     // Generate new CSRF token
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
     
+    // Log successful submission
+    error_log('Contact form submission successful: ' . $email);
+    
     echo json_encode([
         'status' => 'success',
         'message' => 'Thank you for your enquiry! We will contact you within 24 working hours.',
@@ -150,16 +155,20 @@ try {
     ]);
     
 } catch (PDOException $e) {
+    // Log database error
     error_log('Contact form database error: ' . $e->getMessage());
     echo json_encode([
         'status' => 'error',
-        'message' => 'Database connection error. Please try again later or contact us directly.'
+        'message' => 'Database connection error. Please try again later or contact us directly.',
+        'debug' => 'Database error: ' . $e->getMessage()
     ]);
 } catch (Exception $e) {
+    // Log general error
     error_log('Contact form error: ' . $e->getMessage());
     echo json_encode([
         'status' => 'error',
-        'message' => 'Sorry, there was an error processing your request. Please try again later.'
+        'message' => 'Sorry, there was an error processing your request. Please try again later.',
+        'debug' => 'General error: ' . $e->getMessage()
     ]);
 }
 ?>
