@@ -18,9 +18,7 @@ class DatabaseConnection {
         $this->dbname = DB_NAME;
         $this->username = DB_USER;
         $this->password = DB_PASS;
-    
-    // Remove duplicate constructor
-    // public function __construct() {
+        
         try {
             $dsn = "mysql:host={$this->host};dbname={$this->dbname};charset=utf8mb4";
             $options = [

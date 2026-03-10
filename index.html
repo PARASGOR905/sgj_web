@@ -11,6 +11,27 @@
     <meta name="msapplication-TileColor" content="#0B3C5D">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="SGJ Institute of Management & IT - Best College in Kutch">
+    <meta property="og:description" content="Best College in Kutch for BCA, BBA & BA Programs with SSIP, NCC and NSS facilities">
+    <meta property="og:image" content="https://sgjcollege.in/assets/images/SGJ%20COLLEGE.png">
+    <meta property="og:url" content="https://sgjcollege.in">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SGJ Institute of Management & IT">
+    <meta property="og:locale" content="en_IN">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SGJ Institute of Management & IT - Best College in Kutch">
+    <meta name="twitter:description" content="Best College in Kutch for BCA, BBA & BA Programs with SSIP, NCC and NSS facilities">
+    <meta name="twitter:image" content="https://sgjcollege.in/assets/images/SGJ%20COLLEGE.png">
+    <meta name="twitter:creator" content="@sgjcollege">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Referrer-Policy" content="strict-origin">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -20,7 +41,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./assets/js/tailwind-config.js"></script>
 
-    <link rel="stylesheet" href="./assets/css/style.css?v=2.5">
+    <link rel="stylesheet" href="./assets/css/style.css?v=3.5">
     <link rel="canonical" href="https://sgjcollege.in/">
     
     <!-- College Schema -->
@@ -116,19 +137,21 @@
     </section>
 
     <main>
-        <section class="hero-section relative overflow-hidden" style="background: linear-gradient(135deg, #0B3C5D 0%, #1D70B8 100%) !important;">
+        <section class="hero-section relative overflow-hidden" role="banner" style="background: url('./assets/images/SGJ COLLEGE.png') center/cover no-repeat !important; min-height: 600px;">
+                    <!-- Dark overlay for text contrast -->
+                    <div class="absolute inset-0 bg-black/40"></div>
                     <!-- Subtle scrapbook element -->
-                    <div class="absolute top-8 right-8 opacity-10 rotate-12">
+                    <div class="absolute top-8 right-8 opacity-30 rotate-12">
                         <svg width="80" height="80" viewBox="0 0 100 100" class="text-white fill-current">
                             <path d="M10,50 Q25,10 50,50 T90,50" stroke="currentColor" fill="none" stroke-width="2"/>
                         </svg>
                     </div>
-            <div class="container mx-auto px-6 text-center text-white">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight" style="font-weight: 700 !important;">SGJ Institute of Management & IT</h1>
-                <p class="text-xl mb-6" style="color: #E5E7EB !important; opacity: 0.9 !important;">Best College in Kutch for BCA, BBA & BA Programs</p>
+            <div class="container mx-auto px-6 text-center pt-20 relative z-10">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight" style="font-weight: 700 !important; color: #FFFFFF !important; text-shadow: 3px 3px 6px rgba(0,0,0,0.8);">SGJ Institute of Management & IT</h1>
+                <p class="text-xl mb-6" style="color: #FFFFFF !important; text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">Best College in Kutch for BCA, BBA & BA Programs</p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
-                    <a href="contact.html" aria-label="Apply for admission at SGJ College" class="btn-primary text-center py-3 px-8 rounded-lg transition-all duration-300 hover:transform hover:-translate-y-1">Apply Now</a>
-                    <a href="about.html" class="btn-secondary text-center py-3 px-8 rounded-lg transition-all duration-300 hover:transform hover:-translate-y-1">Learn More</a>
+                    <a href="contact.html" aria-label="Apply for admission at SGJ College" role="button" class="btn-primary text-center py-3 px-8 rounded-lg transition-all duration-300 hover:transform hover:-translate-y-1" style="background: #0B3C5D !important; color: white !important; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Apply Now</a>
+                    <a href="about.html" role="button" class="btn-secondary text-center py-3 px-8 rounded-lg transition-all duration-300 hover:transform hover:-translate-y-1" style="background: #1D70B8 !important; color: white !important; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Learn More</a>
                 </div>
             </div>
         </section>
