@@ -249,9 +249,11 @@ function showMessage(message, type) {
     }, 5000);
 }
 
-// Initialize everything when DOM is ready
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initializeDarkMode);
-} else {
-    initializeDarkMode();
+// Initialize dark mode only when layout.js has defined it.
+if (typeof initializeDarkMode === 'function') {
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initializeDarkMode);
+    } else {
+        initializeDarkMode();
+    }
 }

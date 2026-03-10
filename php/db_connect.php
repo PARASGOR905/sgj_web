@@ -7,6 +7,7 @@ require_once __DIR__ . '/config.php';
 
 class DatabaseConnection {
     private $host;
+    private $port;
     private $dbname;
     private $username;
     private $password;
@@ -15,12 +16,13 @@ class DatabaseConnection {
     public function __construct() {
         // Use configuration constants
         $this->host = DB_HOST;
+        $this->port = DB_PORT;
         $this->dbname = DB_NAME;
         $this->username = DB_USER;
         $this->password = DB_PASS;
         
         try {
-            $dsn = "mysql:host={$this->host};dbname={$this->dbname};charset=utf8mb4";
+            $dsn = "mysql:host={$this->host};port={$this->port};dbname={$this->dbname};charset=utf8mb4";
             $options = [
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,

@@ -2,6 +2,8 @@
 *.log
 php/download_log*.txt
 php/submissions.log
+php/enquiries_fallback.jsonl
+php/sessions/
 
 # Temporary files
 *.tmp

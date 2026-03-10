@@ -1,4 +1,13 @@
 <?php
+// Use a project-local session directory when available.
+$session_dir = __DIR__ . '/sessions';
+if (!is_dir($session_dir)) {
+    @mkdir($session_dir, 0775, true);
+}
+if (is_dir($session_dir) && is_writable($session_dir)) {
+    session_save_path($session_dir);
+}
+
 session_start();
 
 // Security check - ensure this file is accessed only through proper requests
@@ -37,7 +46,7 @@ if (!file_exists($file_path)) {
 
 // Log the download with size limit check
 $log_file = __DIR__ . '/download_log.txt';
-$log_message = date('Y-m-d H:i:s') . " - Download: " . $requested_file . " - IP: " . ($_SERVER['REMOTE_ADDR'] ?? 'unknown') . "\n";
+$log_message = date('Y-m-d H:i:s') . ' - Download: ' . $requested_file . ' - IP: ' . ($_SERVER['REMOTE_ADDR'] ?? 'unknown') . "\n";
 
 // Rotate log if it exceeds 5MB
 if (file_exists($log_file) && filesize($log_file) > 5 * 1024 * 1024) {

@@ -35,7 +35,7 @@
       "email": "info@sgjcollege.in",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Shree Swaminarayan Gurukul, Kodaypul, Bhuj–Mandvi Highway",
+        "streetAddress": "Shree Swaminarayan Gurukul, Kodaypul, Bhuj-Mandvi Highway",
         "addressLocality": "Mandvi",
         "addressRegion": "Gujarat",
         "postalCode": "370465",
@@ -296,7 +296,7 @@
               <summary
                 class="cursor-pointer font-semibold text-lg text-indigo-700 flex justify-between items-center">
                 What programs does SGJ College offer?
-                <span class="transition group-open:rotate-180">⌄</span>
+                <span class="transition group-open:rotate-180">&#8964;</span>
               </summary>
               <p class="mt-3 text-gray-600">
                 SGJ College offers BCA, BBA, and BA programs, supported by our SSIP grantee
@@ -308,7 +308,7 @@
               <summary
                 class="cursor-pointer font-semibold text-lg text-indigo-700 flex justify-between items-center">
                 What facilities are available at SGJ College?
-                <span class="transition group-open:rotate-180">⌄</span>
+                <span class="transition group-open:rotate-180">&#8964;</span>
               </summary>
               <p class="mt-3 text-gray-600">
                 We provide NCC, NSS, Naval Training, Cyber Labs, and SSIP initiatives to
@@ -320,7 +320,7 @@
               <summary
                 class="cursor-pointer font-semibold text-lg text-indigo-700 flex justify-between items-center">
                 How do I apply for admission?
-                <span class="transition group-open:rotate-180">⌄</span>
+                <span class="transition group-open:rotate-180">&#8964;</span>
               </summary>
               <p class="mt-3 text-gray-600">
                 Simply fill out the admission enquiry form above. Our team will contact
@@ -336,7 +336,7 @@
               <summary
                 class="cursor-pointer font-semibold text-lg text-indigo-700 flex justify-between items-center">
                 Where is SGJ College located?
-                <span class="transition group-open:rotate-180">⌄</span>
+                <span class="transition group-open:rotate-180">&#8964;</span>
               </summary>
               <p class="mt-3 text-gray-600">
                 SGJ Institute of Management & IT is located at
@@ -354,17 +354,22 @@
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/layout.js"></script>
     <script>
-        // Load initial CSRF token from server
-        fetch('php/get_csrf_token.php')
+        // Load initial CSRF token from server (include credentials so cookie is saved)
+        fetch('php/get_csrf_token.php', {
+            method: 'GET',
+            credentials: 'same-origin'
+        })
             .then(response => response.json())
             .then(data => {
                 document.getElementById('csrf_token').value = data.token;
             })
             .catch(error => {
                 console.error('Error getting CSRF token:', error);
-                // Fallback: try to generate client-side token if server fails
-                const fallbackToken = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-                document.getElementById('csrf_token').value = fallbackToken;
+                const msg = document.getElementById('form-msg');
+                const submitBtn = document.getElementById('submit-btn');
+                msg.textContent = 'Unable to initialize secure form token. Please refresh the page and try again.';
+                msg.className = 'text-center mt-4 text-red-600';
+                submitBtn.disabled = true;
             });
         
         // Form submission handler with loading states
@@ -449,6 +454,13 @@
                 return;
             }
 
+            const csrfToken = document.getElementById('csrf_token').value;
+            if (!csrfToken) {
+                msg.textContent = 'Security token missing. Please refresh the page and try again.';
+                msg.className = 'text-center mt-4 text-red-600';
+                return;
+            }
+
             // Show loading state
             btnText.textContent = 'Submitting...';
             btnLoading.classList.remove('hidden');
@@ -474,8 +486,8 @@
                     msg.innerHTML = '<div class="flex items-center justify-center"><svg class="w-5 h-5 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>' + (result.message || 'Enquiry submitted successfully! Redirecting to thank you page...') + '</div>';
                     msg.className = 'text-center mt-4 text-green-600 flex items-center justify-center';
                                     
-                    // Refresh CSRF token after successful submission
-                    fetch('php/get_csrf_token.php')
+                    // Refresh CSRF token after successful submission (include credentials)
+                    fetch('php/get_csrf_token.php', { credentials: 'same-origin' })
                         .then(response => response.json())
                         .then(data => {
                             document.getElementById('csrf_token').value = data.token;
@@ -485,8 +497,8 @@
                     msg.textContent = result.message || 'There was an error submitting your enquiry. Please try again.';
                     msg.className = 'text-center mt-4 text-red-600';
                     
-                    // Refresh CSRF token after error to prevent repeated attacks
-                    fetch('php/get_csrf_token.php')
+                    // Refresh CSRF token after error to prevent repeated attacks (include credentials)
+                    fetch('php/get_csrf_token.php', { credentials: 'same-origin' })
                         .then(response => response.json())
                         .then(data => {
                             document.getElementById('csrf_token').value = data.token;
@@ -506,8 +518,8 @@
                     statusText: error.statusText
                 });
                 
-                // Refresh CSRF token after error
-                fetch('php/get_csrf_token.php')
+                // Refresh CSRF token after error (include credentials)
+                fetch('php/get_csrf_token.php', { credentials: 'same-origin' })
                     .then(response => response.json())
                     .then(data => {
                         document.getElementById('csrf_token').value = data.token;

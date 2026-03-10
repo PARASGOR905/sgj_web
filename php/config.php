@@ -7,6 +7,8 @@ define('DB_HOST', getenv('DB_HOST') ?: 'localhost');
 define('DB_NAME', getenv('DB_NAME') ?: 'sgj_college');
 define('DB_USER', getenv('DB_USER') ?: 'sgj_user');
 define('DB_PASS', getenv('DB_PASS') ?: 'sgjpassword123');
+define('DB_PORT', (int) (getenv('DB_PORT') ?: 3306));
+define('ENQUIRY_FALLBACK_FILE', __DIR__ . '/enquiries_fallback.jsonl');
 
 // Site Configuration
 define('SITE_URL', getenv('SITE_URL') ?: 'https://sgjcollege.in');
@@ -29,3 +31,4 @@ define('MAX_EMAIL_LENGTH', 100);
 define('MAX_PHONE_LENGTH', 15);
 define('MAX_MESSAGE_LENGTH', 1000);
 ?>
+

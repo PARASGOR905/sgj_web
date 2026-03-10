@@ -2,13 +2,49 @@
 // SGJ Institute Contact Form Processing
 // Handle form submissions securely
 
+// Load configuration first
+require_once __DIR__ . '/config.php';
+
+// Use a project-local session directory when available.
+$session_dir = __DIR__ . '/sessions';
+if (!is_dir($session_dir)) {
+    @mkdir($session_dir, 0775, true);
+}
+if (is_dir($session_dir) && is_writable($session_dir)) {
+    session_save_path($session_dir);
+}
+
 // Start session for CSRF and rate limiting
 session_start();
 
-// Load configuration
-require_once __DIR__ . '/config.php';
-
 header('Content-Type: application/json');
+
+function refresh_security_state() {
+    $_SESSION['last_submission'] = time();
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+    $_SESSION['csrf_token_time'] = time();
+    return $_SESSION['csrf_token'];
+}
+
+function store_enquiry_fallback($name, $email, $phone, $course, $message) {
+    $payload = [
+        'stored_at' => date('c'),
+        'name' => $name,
+        'email' => $email,
+        'phone' => $phone,
+        'course' => $course,
+        'message' => $message,
+        'ip_address' => $_SERVER['REMOTE_ADDR'] ?? 'unknown',
+        'user_agent' => $_SERVER['HTTP_USER_AGENT'] ?? 'unknown'
+    ];
+
+    $json = json_encode($payload, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+    if ($json === false) {
+        return false;
+    }
+
+    return file_put_contents(ENQUIRY_FALLBACK_FILE, $json . PHP_EOL, FILE_APPEND | LOCK_EX) !== false;
+}
 
 // Secure CORS - only allow specific origins
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
@@ -53,6 +89,7 @@ if (time() - $_SESSION['last_submission'] < RATE_LIMIT_SECONDS) {
 // Initialize CSRF token if not exists
 if (!isset($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+    $_SESSION['csrf_token_time'] = time();
 }
 
 // Validate CSRF token
@@ -120,13 +157,13 @@ if (!empty($errors)) {
 // Process the form
 try {
     // Include database connection
-    require_once 'db_connect.php';
-    
+    require_once __DIR__ . '/db_connect.php';
+
     // Get database connection
     $db = getDB();
-    
+
     // Prepare and execute database insertion
-    $sql = "INSERT INTO enquiries (name, email, phone, course, message, ip_address, user_agent) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    $sql = 'INSERT INTO enquiries (name, email, phone, course, message, ip_address, user_agent) VALUES (?, ?, ?, ?, ?, ?, ?)';
     $params = [
         $name,
         $email,
@@ -136,42 +173,44 @@ try {
         $_SERVER['REMOTE_ADDR'] ?? 'unknown',
         $_SERVER['HTTP_USER_AGENT'] ?? 'unknown'
     ];
-    
-    $stmt = $db->query($sql, $params);
-    
-    // Update rate limiting
-    $_SESSION['last_submission'] = time();
-    
-    // Generate new CSRF token
-    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-    
+
+    $db->query($sql, $params);
+
+    $new_token = refresh_security_state();
+
     // Log successful submission
     error_log('Contact form submission successful: ' . $email);
-    
+
     echo json_encode([
         'status' => 'success',
         'message' => 'Thank you for your enquiry! We will contact you within 24 working hours.',
-        'token' => $_SESSION['csrf_token']
+        'token' => $new_token,
+        'stored' => 'database'
     ]);
-    
+
     // Close session write
     session_write_close();
-    
-} catch (PDOException $e) {
-    // Log database error
-    error_log('Contact form database error: ' . $e->getMessage());
-    echo json_encode([
-        'status' => 'error',
-        'message' => 'Database connection error. Please try again later or contact us directly.',
-        'debug' => 'Database error: ' . $e->getMessage()
-    ]);
 } catch (Exception $e) {
-    // Log general error
-    error_log('Contact form error: ' . $e->getMessage());
+    error_log('Contact form storage error: ' . $e->getMessage());
+
+    // Fallback: store enquiry in local file when database is unavailable.
+    if (store_enquiry_fallback($name, $email, $phone, $course, $message)) {
+        $new_token = refresh_security_state();
+
+        echo json_encode([
+            'status' => 'success',
+            'message' => 'Thank you for your enquiry! We have received your details and will contact you soon.',
+            'token' => $new_token,
+            'stored' => 'fallback'
+        ]);
+
+        session_write_close();
+        exit;
+    }
+
     echo json_encode([
         'status' => 'error',
-        'message' => 'Sorry, there was an error processing your request. Please try again later.',
-        'debug' => 'General error: ' . $e->getMessage()
+        'message' => 'Unable to submit your enquiry right now. Please try again later.'
     ]);
 }
 ?>
