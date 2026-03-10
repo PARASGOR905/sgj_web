@@ -154,6 +154,9 @@ try {
         'token' => $_SESSION['csrf_token']
     ]);
     
+    // Close session write
+    session_write_close();
+    
 } catch (PDOException $e) {
     // Log database error
     error_log('Contact form database error: ' . $e->getMessage());

@@ -1,5 +1,5 @@
 # Protect PHP directory
-# Only allow specific PHP files to be accessed
+# Allow specific PHP files to be accessed
 
 # Deny directory listing
 Options -Indexes
@@ -9,12 +9,7 @@ Options -Indexes
     Require all denied
 </FilesMatch>
 
-# Allow only specific PHP files
+# Allow specific PHP files
 <FilesMatch "^(contact_process|download_handler|get_csrf_token)\.php$">
     Require all granted
-</FilesMatch>
-
-# Deny all other PHP files
-<FilesMatch "\.php$">
-    Require all denied
 </FilesMatch>
