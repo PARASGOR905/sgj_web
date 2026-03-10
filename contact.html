@@ -18,7 +18,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./assets/js/tailwind-config.js"></script>
 
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css?v=3.9">
     <link rel="canonical" href="https://sgjcollege.in/contact.html">
     
     <!-- College Schema -->
@@ -459,7 +459,8 @@
             // Send data to backend
             fetch('php/contact_process.php', {
                 method: 'POST',
-                body: data
+                body: data,
+                credentials: 'same-origin' // Important for session/CSRF
             })
             .then(response => response.json())
             .then(result => {
@@ -494,9 +495,16 @@
                 }
             })
             .catch(error => {
-                console.error('Error:', error);
-                msg.textContent = 'There was an error submitting your enquiry. Please try again.';
+                console.error('Fetch Error:', error);
+                msg.textContent = 'Network error. Please check your internet connection and try again.';
                 msg.className = 'text-center mt-4 text-red-600';
+                
+                // Show detailed error for debugging
+                console.log('Error details:', {
+                    message: error.message,
+                    status: error.status,
+                    statusText: error.statusText
+                });
                 
                 // Refresh CSRF token after error
                 fetch('php/get_csrf_token.php')
