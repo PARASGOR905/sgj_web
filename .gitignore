@@ -33,6 +33,7 @@ Desktop.ini
 .env
 .env.local
 config.local.php
+php/config.local.php
 
 # Backup files
 *.backup
@@ -45,6 +46,7 @@ package-lock.json
 # Cache files
 *.cache
 .cache/
+.chrome-profile/
 
 # Upload directories (if any)
 uploads/

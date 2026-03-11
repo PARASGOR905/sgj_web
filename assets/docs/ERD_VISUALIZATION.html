@@ -58,7 +58,7 @@
             gap: 10px;
         }
         .section h2::before {
-            content: "📊";
+            content: "Chart";
             font-size: 1.2em;
         }
         .mermaid {
@@ -131,17 +131,17 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>🏫 SGJ Institute - System Architecture</h1>
+            <h1>SGJ Institute - System Architecture</h1>
             <p>Database ERD, Flowcharts, and Technical Documentation</p>
         </div>
 
         <div class="nav">
-            <button onclick="showSection('erd')" class="active">📊 Database ERD</button>
-            <button onclick="showSection('flow')">🔄 System Flows</button>
-            <button onclick="showSection('architecture')">🏗️ Architecture</button>
-            <button onclick="showSection('security')">🛡️ Security</button>
-            <button onclick="showSection('performance')">⚡ Performance</button>
-            <button onclick="showSection('deployment')">🚀 Deployment</button>
+            <button onclick="showSection('erd')" class="active">Database ERD</button>
+            <button onclick="showSection('flow')">System Flows</button>
+            <button onclick="showSection('architecture')">Architecture</button>
+            <button onclick="showSection('security')">Security</button>
+            <button onclick="showSection('performance')">Performance</button>
+            <button onclick="showSection('deployment')">Deployment</button>
         </div>
 
         <div class="content">
@@ -183,16 +183,16 @@ erDiagram
 
             <!-- System Flows Section -->
             <div id="flow" class="section" style="display: none;">
-                <h2 style="margin-bottom: 30px;">🔄 System Flow Diagrams</h2>
+                <h2 style="margin-bottom: 30px;">System Flow Diagrams</h2>
                 
                 <h3>Contact Form Processing Flow</h3>
                 <div class="mermaid">
 sequenceDiagram
-    participant U as 👤 User
-    participant B as 🌐 Browser
-    participant F as 📄 Frontend
-    participant P as ⚙️ PHP Backend
-    participant D as 🗄️ Database
+    participant U as User
+    participant B as Browser
+    participant F as Frontend
+    participant P as PHP Backend
+    participant D as Database
     
     U->>B: 1. Open contact.html
     B->>F: 2. Load page components
@@ -229,10 +229,10 @@ sequenceDiagram
                 <h3>Download System Flow</h3>
                 <div class="mermaid">
 sequenceDiagram
-    participant U as 👤 User
-    participant B as 🌐 Browser
-    participant P as ⚙️ PHP Backend
-    participant F as 📁 File System
+    participant U as User
+    participant B as Browser
+    participant P as PHP Backend
+    participant F as File System
     
     U->>B: 1. Click download link
     B->>P: 2. Request file with token
@@ -256,32 +256,32 @@ sequenceDiagram
 
             <!-- Architecture Section -->
             <div id="architecture" class="section" style="display: none;">
-                <h2 style="margin-bottom: 30px;">🏗️ Technical Architecture</h2>
+                <h2 style="margin-bottom: 30px;">Technical Architecture</h2>
                 
                 <div class="mermaid">
 graph TB
-    subgraph "🌐 Frontend Layer"
+    subgraph "Frontend Layer"
         A[HTML5 Pages]
         B[Tailwind CSS]
         C[JavaScript ES6+]
         D[Responsive Design]
     end
     
-    subgraph "⚙️ Backend Layer"
+    subgraph "Backend Layer"
         E[PHP 8.0]
         F[PDO Database]
         G[Security Modules]
         H[API Endpoints]
     end
     
-    subgraph "🗄️ Data Layer"
+    subgraph "Data Layer"
         I[MySQL 8.0]
         J[InnoDB Engine]
         K[UTF-8 Encoding]
         L[Indexed Tables]
     end
     
-    subgraph "🛡️ Security Layer"
+    subgraph "Security Layer"
         M[CSRF Protection]
         N[Input Validation]
         O[Rate Limiting]
@@ -308,31 +308,31 @@ graph TB
 
             <!-- Security Section -->
             <div id="security" class="section" style="display: none;">
-                <h2 style="margin-bottom: 30px;">🛡️ Security Architecture</h2>
+                <h2 style="margin-bottom: 30px;">Security Architecture</h2>
                 
                 <div class="mermaid">
 graph TB
-    subgraph "🌐 Network Security"
+    subgraph "Network Security"
         A[HTTPS/SSL]
         B[CORS Policy]
         C[Security Headers]
     end
     
-    subgraph "⚙️ Application Security"
+    subgraph "Application Security"
         D[CSRF Tokens]
         E[Rate Limiting]
         F[Input Validation]
         G[Session Security]
     end
     
-    subgraph "🗄️ Database Security"
+    subgraph "Database Security"
         H[Prepared Statements]
         I[User Privileges]
         J[Connection Encryption]
         K[Access Logging]
     end
     
-    subgraph "📄 Content Security"
+    subgraph "Content Security"
         L[XSS Protection]
         M[Content Security Policy]
         N[File Access Control]
@@ -359,11 +359,11 @@ graph TB
 
             <!-- Performance Section -->
             <div id="performance" class="section" style="display: none;">
-                <h2 style="margin-bottom: 30px;">⚡ Performance Metrics</h2>
+                <h2 style="margin-bottom: 30px;">Performance Metrics</h2>
                 
                 <div class="mermaid">
 graph TB
-    subgraph "🎨 Frontend Optimization"
+    subgraph "Frontend Optimization"
         A[Lazy Loading Images]
         B[CSS Minification]
         C[JavaScript Deferral]
@@ -371,14 +371,14 @@ graph TB
         E[Compression Gzip]
     end
     
-    subgraph "⚙️ Backend Optimization"
+    subgraph "Backend Optimization"
         F[Database Indexing]
         G[Connection Pooling]
         H[Query Optimization]
         I[Error Logging]
     end
     
-    subgraph "🌐 Network Optimization"
+    subgraph "Network Optimization"
         J[CDN Integration]
         K[HTTP/2 Support]
         L[Resource Bundling]
@@ -405,25 +405,25 @@ graph TB
 
             <!-- Deployment Section -->
             <div id="deployment" class="section" style="display: none;">
-                <h2 style="margin-bottom: 30px;">🚀 Deployment Architecture</h2>
+                <h2 style="margin-bottom: 30px;">Deployment Architecture</h2>
                 
                 <div class="mermaid">
 graph TB
-    subgraph "💻 Development Environment"
+    subgraph "Development Environment"
         A[Local XAMPP]
         B[Git Repository]
         C[VS Code Editor]
         D[Chrome DevTools]
     end
     
-    subgraph "🔄 Version Control"
+    subgraph "Version Control"
         E[Git Branches]
         F[Commit History]
         G[Tag Management]
         H[Pull Requests]
     end
     
-    subgraph "🚀 Production Server"
+    subgraph "Production Server"
         I[Apache Web Server]
         J[MySQL Database]
         K[SSL Certificate]
@@ -473,7 +473,7 @@ graph TB
         </div>
 
         <div class="footer">
-            <p>🎓 <strong>SGJ Institute - Complete System Documentation</strong></p>
+            <p><strong>SGJ Institute - Complete System Documentation</strong></p>
             <p>Interactive ERD, Flowcharts, and Architecture Diagrams | Generated: March 2026</p>
         </div>
     </div>
@@ -503,3 +503,4 @@ graph TB
     </script>
 </body>
 </html>
+

@@ -86,17 +86,17 @@ FLUSH PRIVILEGES;
 
 ### **3. Configuration Setup**
 ```php
-// php/config.php - Development (default)
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'sgj_college');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-
-// Production - Use Environment Variables
+// php/config.php - safe tracked defaults
 define('DB_HOST', getenv('DB_HOST') ?: 'localhost');
 define('DB_NAME', getenv('DB_NAME') ?: 'sgj_college');
 define('DB_USER', getenv('DB_USER') ?: 'root');
 define('DB_PASS', getenv('DB_PASS') ?: '');
+
+// php/config.local.php - local machine override (ignored by git)
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'sgj_college');
+define('DB_USER', 'your_local_user');
+define('DB_PASS', 'your_local_password');
 ```
 
 ### **4. Environment Variables (Production)**
@@ -133,9 +133,6 @@ sgj_web/
 │   │   └── Notices_List.pdf
 │   ├── 🖼️ images/
 │   │   ├── SGJ COLLEGE.png       # Main college image
-│   │   ├── logo.png              # College logo
-│   │   ├── campus.jpg            # Campus photo
-│   │   └── favicon.ico           # Site favicon
 │   └── 📜 js/
 │       ├── layout.js              # Header/footer dynamic loading
 │       ├── main.js               # Main JavaScript functionality

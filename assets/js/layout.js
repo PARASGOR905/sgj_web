@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     loadHeader();
     loadFooter();
     initializeLayoutComponents();
+    highlightActiveLink();
 });
 
 // Load Header
@@ -58,6 +59,7 @@ function loadHeader() {
                 <a href="${pathPrefix}about.html" class="nav-link hover:text-white transition duration-300 px-3 py-2 rounded-lg hover:bg-[var(--accent)]/30 text-[var(--accent)]">About</a>
                 <a href="${pathPrefix}gallery.html" class="nav-link hover:text-white transition duration-300 px-3 py-2 rounded-lg hover:bg-[var(--accent)]/30 text-[var(--accent)]">Gallery</a>
                 <a href="${pathPrefix}downloads.html" class="nav-link hover:text-white transition duration-300 px-3 py-2 rounded-lg hover:bg-[var(--accent)]/30 text-[var(--accent)]">Downloads</a>
+                <a href="${pathPrefix}contact.html" class="nav-link hover:text-white transition duration-300 px-3 py-2 rounded-lg hover:bg-[var(--accent)]/30 text-[var(--accent)]">Contact</a>
                 <!-- Mobile Apply Now inside menu -->
                 <a href="${pathPrefix}contact.html"
                    class="md:hidden mt-2 w-full text-center font-semibold rounded-lg bg-[var(--accent)] text-[var(--primary)] p-2">
@@ -129,17 +131,14 @@ function loadFooter() {
                 <p class="text-sm">
                     Shree Swaminarayan Gurukul<br>
                     Mandvi, Kutch, Gujarat<br><br>
-                    📞 <a href="tel:+919099987846" class="hover:text-[--accent]">+91 9099987846</a><br>
-                    📧 <a href="mailto:info@sgjcollege.in" class="hover:text-[--accent]">info@sgjcollege.in</a>
+                    Phone: <a href="tel:+919099987846" class="hover:text-[var(--accent)]">+91 9099987846</a><br>
+                    Email: <a href="mailto:info@sgjcollege.in" class="hover:text-[var(--accent)]">info@sgjcollege.in</a>
                 </p>
             </div>
         </div>
 
-        <div class="border-t border-[--border-light] text-center py-4" style="color: #D1D5DB !important; font-size: 14px !important;">
-            © <span id="year"></span> SGJ Institute of Management & IT. All rights reserved.
-            <script>
-                document.getElementById("year").textContent = new Date().getFullYear();
-            </script>
+        <div class="border-t border-[var(--border-light)] text-center py-4" style="color: #D1D5DB !important; font-size: 14px !important;">
+            &copy; <span id="year"></span> SGJ Institute of Management & IT. All rights reserved.
         </div>
         
         <!-- Back to Top Button -->
@@ -261,6 +260,11 @@ function closeMobileMenu() {
 // Initialize Footer Functionality
 function initializeFooterFunctionality() {
     const backToTopButton = document.getElementById('backToTop');
+    const yearElement = document.getElementById('year');
+
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
     
     if (backToTopButton) {
         // Show/hide back to top button
@@ -290,10 +294,11 @@ function highlightActiveLink() {
     const navLinks = document.querySelectorAll('#main-nav a');
     
     navLinks.forEach(link => {
-        const linkPage = link.getAttribute('href');
+        const rawHref = link.getAttribute('href') || '';
+        const linkPage = rawHref.split('/').pop();
         if (linkPage === currentPage) {
-            link.classList.add('text-white', 'bg-[--accent]/30');
-            link.classList.remove('text-[--accent]');
+            link.classList.add('text-white', 'bg-[var(--accent)]/30');
+            link.classList.remove('text-[var(--accent)]');
         }
     });
 }
