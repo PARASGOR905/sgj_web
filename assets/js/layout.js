@@ -26,9 +26,9 @@ function loadHeader() {
     header.style.color = 'white';
     
     header.innerHTML = `
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3 min-w-0">
             <!-- Logo -->
-            <div class="flex items-center gap-4">
+            <div class="flex min-w-0 items-center gap-3 sm:gap-4">
                 <!-- SGJ Institute Logo -->
                 <div class="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-lg shadow-sm flex-shrink-0">
                   <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 sm:w-8 sm:h-8 text-[#0B3C5D]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -40,21 +40,21 @@ function loadHeader() {
                     <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
                   </svg>
                 </div>
-                <div class="leading-tight">
-                  <span class="block font-bold text-white text-base sm:text-lg whitespace-nowrap">SGJ Institute</span>
-                  <span class="hidden sm:block text-xs sm:text-sm text-[#FFC107]">Management &amp; IT</span>
+                <div class="min-w-0 leading-tight">
+                  <span class="block font-bold text-white text-sm sm:text-lg truncate">SGJ Institute</span>
+                  <span class="block text-[10px] sm:text-sm text-[#FFC107] truncate">Management &amp; IT</span>
                 </div>
             </div>
 
             <!-- Mobile menu button -->
-            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none" aria-label="Toggle menu" aria-expanded="false" style="color: white !important;">
-                <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="color: white !important; stroke: white !important;">
+            <button id="mobile-menu-btn" class="md:hidden flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl border border-white/20 bg-white/10 text-white shadow-sm transition hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2 focus:ring-offset-[var(--primary)]" aria-label="Toggle menu" aria-expanded="false">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </button>
 
             <!-- Nav -->
-            <nav id="main-nav" class="md:flex items-center gap-6 text-white font-medium hidden flex-col md:flex-row absolute md:static top-full left-0 w-full md:w-auto bg-[var(--primary)] md:bg-transparent px-4 pb-4 md:px-0 md:pb-0 space-y-2 md:space-y-0" role="navigation" aria-label="Main navigation">
+            <nav id="main-nav" class="md:flex items-center gap-6 text-white font-medium flex-col md:flex-row absolute md:static top-full left-0 w-full md:w-auto bg-[var(--primary)] md:bg-transparent px-4 pb-4 md:px-0 md:pb-0 space-y-2 md:space-y-0" role="navigation" aria-label="Main navigation">
                 <a href="${pathPrefix}index.html" class="nav-link hover:text-white transition duration-300 px-3 py-2 rounded-lg hover:bg-[var(--accent)]/30 text-[var(--accent)]">Home</a>
                 <a href="${pathPrefix}about.html" class="nav-link hover:text-white transition duration-300 px-3 py-2 rounded-lg hover:bg-[var(--accent)]/30 text-[var(--accent)]">About</a>
                 <a href="${pathPrefix}gallery.html" class="nav-link hover:text-white transition duration-300 px-3 py-2 rounded-lg hover:bg-[var(--accent)]/30 text-[var(--accent)]">Gallery</a>
@@ -373,3 +373,4 @@ function initializeLayoutComponents() {
 window.loadHeader = loadHeader;
 window.loadFooter = loadFooter;
 window.toggleDarkMode = toggleDarkMode;
+

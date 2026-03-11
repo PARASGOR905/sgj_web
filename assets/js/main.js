@@ -37,6 +37,10 @@ function initializeFormValidation() {
     const forms = document.querySelectorAll('form');
     
     forms.forEach(form => {
+        if (form.dataset.customValidation === 'true') {
+            return;
+        }
+
         form.addEventListener('submit', function(e) {
             const requiredFields = form.querySelectorAll('[required]');
             let isValid = true;
@@ -109,12 +113,14 @@ function showError(field, message) {
     field.setAttribute('aria-invalid', 'true');
     
     const errorDiv = document.createElement('div');
+    const errorId = 'error-' + Date.now() + '-' + Math.floor(Math.random() * 1000);
     errorDiv.className = 'error-message text-red-600 text-sm mt-1';
+    errorDiv.id = errorId;
     errorDiv.textContent = message;
     errorDiv.setAttribute('role', 'alert');
     
     field.parentNode.appendChild(errorDiv);
-    field.setAttribute('aria-describedby', errorDiv.id || 'error-' + Date.now());
+    field.setAttribute('aria-describedby', errorId);
 }
 
 function clearError(field) {
@@ -170,13 +176,11 @@ function loadHeaderFooter() {
     const footerPlaceholder = document.getElementById('footer-placeholder');
     
     if (headerPlaceholder) {
-        // Header loading would go here
-        console.log('Header placeholder found');
+        // Header loading is handled by layout.js.
     }
     
     if (footerPlaceholder) {
-        // Footer loading would go here
-        console.log('Footer placeholder found');
+        // Footer loading is handled by layout.js.
     }
 }
 
@@ -257,3 +261,4 @@ if (typeof initializeDarkMode === 'function') {
         initializeDarkMode();
     }
 }
+

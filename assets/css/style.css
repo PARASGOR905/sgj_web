@@ -120,7 +120,9 @@ p {
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   box-shadow: 0 4px 6px rgba(230, 175, 46, 0.3);
 }
 
@@ -142,7 +144,9 @@ p {
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-secondary:hover {
@@ -209,33 +213,45 @@ p {
     position: relative;
     z-index: 1001;
     color: white !important;
-    background: none;
-    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.24);
     padding: 0.5rem;
     cursor: pointer;
+    width: 44px;
+    height: 44px;
+    border-radius: 0.75rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    flex-shrink: 0;
   }
   
   #mobile-menu-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 0.75rem;
+  }
+  
+  #mobile-menu-btn svg {
+    width: 1.5rem;
+    height: 1.5rem;
   }
   
   #main-nav {
     position: fixed;
     top: 0;
     left: -100%;
-    width: 80%;
+    width: min(86vw, 320px);
     height: 100vh;
     background: var(--primary);
     transition: left 0.3s ease;
     z-index: 1000;
-    padding: 2rem;
+    padding: 5rem 1.25rem 1.5rem;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.24);
   }
   
   #main-nav.active {
     left: 0;
+    display: flex !important;
   }
   
   #main-nav a {
@@ -736,3 +752,4 @@ footer {
     padding: 0.75rem;
   }
 }
+
