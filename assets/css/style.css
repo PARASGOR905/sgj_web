@@ -395,7 +395,7 @@ p {
   min-height: 45em; /* Scales with zoom */
   background:
     linear-gradient(rgba(11, 60, 93, 0.38), rgba(11, 60, 93, 0.38)),
-    url('../images/SGJ%20COLLEGE.png') center center / cover no-repeat !important; /* Revert to cover */
+    url('../images/SGJ%20COLLEGE.webp') center center / cover no-repeat !important; /* WebP format for better performance */
   background-color: #0B3C5D !important;
 }
 
@@ -724,7 +724,7 @@ p {
   min-height: 68vh;
   background:
     linear-gradient(rgba(11, 60, 93, 0.72), rgba(11, 60, 93, 0.72)),
-    url('../images/SGJ%20COLLEGE.png') center center / cover no-repeat !important;
+    url('../images/SGJ%20COLLEGE.webp') center center / cover no-repeat !important; /* WebP format for better performance */
 }
 
 .page-hero .course-hero-copy {
