@@ -145,7 +145,8 @@ function loadFooter() {
         </div>
 
         <div class="border-t border-[var(--border-light)] text-center flex flex-col items-center justify-center py-4" style="color: #D1D5DB !important; font-size: 14px !important;">
-            &copy; <span id="year"></span> SGJ Institute of Management & IT. All rights reserved.
+            <p class="mb-1">&copy; <span id="year"></span> SGJ Institute of Management & IT. All rights reserved.</p>
+            <p class="text-[12px] opacity-75 mt-1">Developed By <strong>RajGor Paras</strong> & <strong>Vatsal Joshi</strong></p>
         </div>
 
         <button id="backToTop" class="back-to-top hidden" aria-label="Back to top" title="Back to top">
