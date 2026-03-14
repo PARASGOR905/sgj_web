@@ -40,6 +40,9 @@
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
   --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+  
+  /* Zoom level managed by JS */
+  --site-zoom: 1;
 }
 
 /* Base Styles with Mobile First Approach */
@@ -67,9 +70,14 @@ body {
   color: var(--text-primary);
   background-color: #F8FAFC !important;
   overflow-x: hidden;
-  min-height: 100vh;
+  min-height: calc(100vh / var(--site-zoom));
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  /* Zoom support */
+  transform: scale(var(--site-zoom));
+  transform-origin: top center;
+  width: 100vw;
 }
 
 /* Touch-friendly interactions */
