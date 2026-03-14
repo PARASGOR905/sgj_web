@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function () {
     loadFooter();
     initializeLayoutComponents();
     highlightActiveLink();
-    initializeZoomControls();
 });
 
 function getPathPrefix() {
@@ -367,90 +366,4 @@ function initializeLayoutComponents() {
 window.loadHeader = loadHeader;
 window.loadFooter = loadFooter;
 window.toggleDarkMode = toggleDarkMode;
-
-function initializeZoomControls() {
-    const minZoom = 0.5;
-    const maxZoom = 2.0;
-    const zoomStep = 0.1;
-
-    // Load saved zoom or default to 1
-    let currentZoom = parseFloat(localStorage.getItem('siteZoom')) || 1.0;
-    
-    // Apply immediately
-    applyZoom(currentZoom);
-
-    // Create floating zoom controls
-    const zoomControls = document.createElement('div');
-    zoomControls.className = 'fixed left-4 bottom-4 z-50 flex flex-col gap-2 bg-white/90 backdrop-blur-sm p-2 rounded-xl shadow-lg border border-gray-200/50 transition-all duration-300 hover:shadow-xl hover:bg-white';
-    
-    // In mobile, we might want it slightly higher if it conflicts with other buttons
-    if (window.innerWidth < 768) {
-        zoomControls.style.bottom = '80px';
-    }
-
-    zoomControls.innerHTML = `
-        <button id="zoom-in" class="w-10 h-10 flex items-center justify-center rounded-lg bg-blue-50 text-blue-700 hover:bg-blue-100 transition-colors" aria-label="Zoom In" title="Zoom In (Current: ${Math.round(currentZoom * 100)}%)">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
-        </button>
-        <div class="h-px bg-gray-200 mx-2"></div>
-        <button id="zoom-out" class="w-10 h-10 flex items-center justify-center rounded-lg bg-blue-50 text-blue-700 hover:bg-blue-100 transition-colors" aria-label="Zoom Out" title="Zoom Out">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path></svg>
-        </button>
-        <div class="h-px bg-gray-200 mx-2"></div>
-        <button id="zoom-reset" class="w-10 h-10 flex items-center justify-center rounded-lg bg-gray-50 text-gray-600 hover:bg-gray-100 transition-colors text-xs font-bold" aria-label="Reset Zoom" title="Reset Zoom">
-            100%
-        </button>
-    `;
-
-    document.body.appendChild(zoomControls);
-
-    // Event Listeners for buttons
-    document.getElementById('zoom-in').addEventListener('click', () => {
-        if (currentZoom < maxZoom) {
-            currentZoom = Math.min(maxZoom, currentZoom + zoomStep);
-            updateZoom(currentZoom);
-        }
-    });
-
-    document.getElementById('zoom-out').addEventListener('click', () => {
-        if (currentZoom > minZoom) {
-            currentZoom = Math.max(minZoom, currentZoom - zoomStep);
-            updateZoom(currentZoom);
-        }
-    });
-
-    document.getElementById('zoom-reset').addEventListener('click', () => {
-        currentZoom = 1.0;
-        updateZoom(currentZoom);
-    });
-
-    // Update zoom and save to localStorage
-    function updateZoom(zoomLevel) {
-        // Fix floating point math issues (e.g. 1.09999999999)
-        zoomLevel = Math.round(zoomLevel * 10) / 10;
-        currentZoom = zoomLevel;
-        localStorage.setItem('siteZoom', currentZoom);
-        applyZoom(currentZoom);
-        
-        // Update Title on zoom-in button to show current percentage
-        document.getElementById('zoom-in').title = `Zoom In (Current: ${Math.round(currentZoom * 100)}%)`;
-    }
-
-    // Apply the CSS variable
-    function applyZoom(zoomLevel) {
-        document.documentElement.style.setProperty('--site-zoom', zoomLevel);
-    }
-
-    // Listen for storage changes from OTHER tabs to stay in sync
-    window.addEventListener('storage', function(e) {
-        if (e.key === 'siteZoom') {
-            const newZoom = parseFloat(e.newValue);
-            if (!isNaN(newZoom)) {
-                currentZoom = newZoom;
-                applyZoom(currentZoom);
-                document.getElementById('zoom-in').title = `Zoom In (Current: ${Math.round(currentZoom * 100)}%)`;
-            }
-        }
-    });
-}
 
