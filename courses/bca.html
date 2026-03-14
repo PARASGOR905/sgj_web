@@ -69,35 +69,73 @@
 
     <main class="course-page-main">
         <!-- Hero Section -->
-        <section class="hero-section course-hero relative overflow-hidden">
-            <div class="container mx-auto px-6 text-center text-white">
-                <p class="section-brow course-hero-brow">Undergraduate Program</p>
-                <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">Bachelor of Computer Applications</h1>
-                <p class="course-hero-copy text-lg md:text-xl mb-6">A 4-year undergraduate course for students who want to learn programming, databases, web development, and regular practical work.</p>
+        <section class="hero-section course-hero relative overflow-hidden page-hero-home">
+             <div class="absolute inset-0 bg-black/40"></div>
+             <div class="container mx-auto px-6 text-center text-white relative z-10 pt-12 md:pt-20">
+                <p class="text-sm md:text-base font-semibold text-[#ffd25c] uppercase tracking-widest mb-4">Undergraduate Program</p>
+                <h1 class="text-3xl md:text-5xl lg:text-5xl font-extrabold mb-4 leading-tight" style="color: #FFFFFF !important; text-shadow: 3px 3px 6px rgba(0,0,0,0.8);">Bachelor of Computer Applications</h1>
+                <p class="course-hero-copy text-lg md:text-xl mb-6" style="color: #FFFFFF !important; text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">A 4-year undergraduate course for students who want to learn programming, databases, web development, and regular practical work.</p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
                     <a href="../contact.html" class="btn-primary text-center py-3 px-8 rounded-lg transition-all duration-300 hover:transform hover:-translate-y-1">Admission Enquiry</a>
                     <a href="../index.html" class="btn-secondary text-center py-3 px-8 rounded-lg transition-all duration-300 hover:transform hover:-translate-y-1">Back to Home</a>
                 </div>
-                <div class="course-hero-pills" aria-label="Course quick details">
-                    <div class="course-hero-pill">
-                        <span class="course-hero-pill-label">Duration</span>
-                        <span class="course-hero-pill-value">4 Years / 8 Semesters</span>
+                <!-- Hero Pills -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-16">
+                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl hover:bg-white/20 transition-all duration-300">
+                        <span class="block text-[#ffd25c] text-sm font-bold uppercase tracking-wider mb-2">Duration</span>
+                        <span class="block text-white text-lg font-bold">4 Years / 8 Semesters</span>
                     </div>
-                    <div class="course-hero-pill">
-                        <span class="course-hero-pill-label">Intake</span>
-                        <span class="course-hero-pill-value">100 Seats</span>
+                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl hover:bg-white/20 transition-all duration-300">
+                        <span class="block text-[#ffd25c] text-sm font-bold uppercase tracking-wider mb-2">Intake</span>
+                        <span class="block text-white text-lg font-bold">100 Seats</span>
                     </div>
-                    <div class="course-hero-pill">
-                        <span class="course-hero-pill-label">Eligibility</span>
-                        <span class="course-hero-pill-value">12th with Maths / Statistics / Computer</span>
+                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl hover:bg-white/20 transition-all duration-300">
+                        <span class="block text-[#ffd25c] text-sm font-bold uppercase tracking-wider mb-2">Eligibility</span>
+                        <span class="block text-white text-lg font-bold">12th with Maths / Computer</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class="container course-page-shell mx-auto px-6 py-12">
-            <!-- Main Content -->
-            <div>
+        <!-- Main Content -->
+        <div>
+            <!-- Overview Section -->
+            <section id="overview" class="py-16 bg-white fade-up">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <p class="section-brow">Course Overview</p>
+                        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-[#1E4ED8]">About the Course</h2>
+                        <p class="section-intro mt-6">BCA is for students who want a clear base in computer applications, programming, and regular lab work. The course usually combines classroom teaching, hands-on practice, assignments, and project work so students become comfortable with both concepts and practical use.</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="card-box text-center border border-blue-100 hover-lift">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-blue-700">Duration</h3>
+                            <p class="font-semibold text-gray-800 mb-2">4 years / 8 semesters</p>
+                            <p class="text-gray-500 text-sm">Based on the current NEP and university course structure.</p>
+                        </div>
+                        <div class="card-box text-center border border-blue-100 hover-lift">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-blue-700">Intake</h3>
+                            <p class="font-semibold text-gray-800 mb-2">100 seats</p>
+                            <p class="text-gray-500 text-sm">Seats are offered according to institute approval and admission norms.</p>
+                        </div>
+                        <div class="card-box text-center border border-blue-100 hover-lift">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-blue-700">Eligibility</h3>
+                            <p class="font-semibold text-gray-800 mb-2">12th pass with Maths/Computer</p>
+                            <p class="text-gray-500 text-sm">Suitable for students interested in software and computing basics.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
                                 <!-- Overview Section -->
                 <section id="overview" class="course-panel course-panel-intro mb-16 fade-up">
                     <p class="section-brow course-section-brow">Course Overview</p>
@@ -123,200 +161,230 @@
                     </div>
                 </section>
 
-                                    <!-- Eligibility Section -->
-                <section id="eligibility" class="course-panel course-panel-soft mb-16 fade-up">
-                    <p class="section-brow course-section-brow">Admission Basics</p>
-                    <h2 class="text-3xl font-bold mb-6 section-title">Basic Eligibility</h2>
-                    <p class="course-section-copy mb-6">Students should check the latest admission notice for documents, subject requirements, and category-wise rules before applying.</p>
-                    <div class="course-info-card">
-                        <ul class="space-y-4 text-gray-700">
-                            <li class="flex items-start">
-                                <span class="text-green-600 font-bold mr-3">&#10003;</span>
-                                <span>Passed 12th standard from a recognized board</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-green-600 font-bold mr-3">&#10003;</span>
-                                <span>Mathematics, Statistics, or Computer as one subject in 12th</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-green-600 font-bold mr-3">&#10003;</span>
-                                <span>Minimum marks as per institute and university norms</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-green-600 font-bold mr-3">&#10003;</span>
-                                <span>Basic English at SSC or HSC level</span>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-
-                                    <!-- Curriculum Section -->
-                <section id="curriculum" class="course-panel course-panel-soft mb-16 fade-up">
-                    <p class="section-brow course-section-brow">Study Areas</p>
-                    <h2 class="text-3xl font-bold mb-6 section-title">What You Will Study</h2>
-                    <p class="course-section-copy mb-6">The exact paper list can change under university guidelines, but these are the main areas students usually study during the BCA course.</p>
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <div class="course-info-card">
-                            <h3 class="text-xl font-bold mb-4">Core Subjects</h3>
-                            <ul class="space-y-3 text-gray-700">
+            <!-- Eligibility Section -->
+            <section id="eligibility" class="py-16 bg-light fade-up border-y border-gray-200">
+                <div class="container mx-auto px-6">
+                    <div class="max-w-4xl mx-auto">
+                        <p class="section-brow text-center">Admission Basics</p>
+                        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-center mb-8 text-[#1E4ED8]">Basic Eligibility</h2>
+                        <p class="section-intro text-center mb-10">Students should check the latest admission notice for documents, subject requirements, and category-wise rules before applying.</p>
+                        
+                        <div class="card-box bg-white">
+                            <ul class="space-y-4 text-gray-700 text-lg">
                                 <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
+                                    <svg class="h-6 w-6 text-green-500 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                    <span>Passed 12th standard from a recognized board</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-6 w-6 text-green-500 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                    <span>Mathematics, Statistics, or Computer as one subject in 12th</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-6 w-6 text-green-500 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                    <span>Minimum marks as per institute and university norms</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-6 w-6 text-green-500 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                    <span>Basic English at SSC or HSC level</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Curriculum Section -->
+            <section id="curriculum" class="py-16 bg-white fade-up">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <p class="section-brow">Study Areas</p>
+                        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-[#1E4ED8]">What You Will Study</h2>
+                        <p class="section-intro mt-6">The exact paper list can change under university guidelines, but these are the main areas students usually study during the BCA course.</p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                        <div class="card-box bg-blue-50/50 border border-blue-100">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center shadow-lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                                </div>
+                                <h3 class="text-2xl font-bold text-blue-900">Core Subjects</h3>
+                            </div>
+                            <ul class="space-y-4 text-gray-700">
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-blue-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
                                     <span>Programming in C, C++, and Java</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
+                                    <svg class="h-5 w-5 text-blue-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
                                     <span>Data Structures and Problem Solving</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
+                                    <svg class="h-5 w-5 text-blue-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
                                     <span>Database Management Systems</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
+                                    <svg class="h-5 w-5 text-blue-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
                                     <span>Web Design and Web Development</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
+                                    <svg class="h-5 w-5 text-blue-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
                                     <span>Software Engineering Basics</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
+                                    <svg class="h-5 w-5 text-blue-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
                                     <span>Computer Networks</span>
                                 </li>
                             </ul>
                         </div>
-                        <div class="course-info-card">
-                            <h3 class="text-xl font-bold mb-4">Practical Areas</h3>
-                            <ul class="space-y-3 text-gray-700">
+                        <div class="card-box bg-blue-50/50 border border-blue-100">
+                             <div class="flex items-center gap-3 mb-6">
+                                <div class="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center shadow-lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                                </div>
+                                <h3 class="text-2xl font-bold text-indigo-900">Practical Areas</h3>
+                            </div>
+                            <ul class="space-y-4 text-gray-700">
                                 <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
+                                    <svg class="h-5 w-5 text-indigo-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
                                     <span>Python and application development basics</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
+                                    <svg class="h-5 w-5 text-indigo-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
                                     <span>Mobile app development basics</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
+                                    <svg class="h-5 w-5 text-indigo-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
                                     <span>Cloud and deployment basics</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
+                                    <svg class="h-5 w-5 text-indigo-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
                                     <span>Data analysis fundamentals</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
+                                    <svg class="h-5 w-5 text-indigo-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
                                     <span>Cybersecurity awareness</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
+                                    <svg class="h-5 w-5 text-indigo-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
                                     <span>Project work and lab assignments</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                </section>
-
-                                    <!-- Career Prospects Section -->
-                <section id="careers" class="course-panel course-panel-soft mb-16 fade-up">
-                    <p class="section-brow course-section-brow">Future Path</p>
-                    <h2 class="text-3xl font-bold mb-6 section-title">After the Course</h2>
-                    <p class="course-section-copy mb-6">After BCA, students often move toward junior technical roles, internships, skill-based certifications, or higher study such as MCA. The course gives a useful foundation, while regular practice and projects help shape the next step.</p>
-
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <div class="course-list-card">
-                            <h3 class="text-xl font-bold mb-4">Common Starting Roles</h3>
-                            <ul class="space-y-3 text-gray-700">
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Junior Software Developer</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Web Developer</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>QA or Testing Executive</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Technical Support Executive</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Junior Data or MIS Assistant</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="course-list-card">
-                            <h3 class="text-xl font-bold mb-4">Where Students May Work</h3>
-                            <ul class="space-y-3 text-gray-700">
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>IT services and support companies</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Small software firms and startups</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Web and digital agencies</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>E-commerce businesses</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Internal tech teams in other organizations</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <p class="course-note mt-6">Growth in this field usually improves with coding practice, project work, communication, and any extra certification or higher study.</p>
-                </section>
-
-                                                        <!-- Course Environment Section -->
-                <section id="why" class="course-panel course-panel-soft mb-16 fade-up">
-                    <p class="section-brow course-section-brow">Student Experience</p>
-                    <h2 class="text-3xl font-bold mb-6 section-title">What Students Gain</h2>
-                    <p class="course-section-copy mb-6">Along with subjects, students usually value the routine, support, and practical exposure they receive during the course.</p>
-                    <div class="course-reasons-grid">
-                        <article class="course-reason-card">
-                            <p class="course-reason-tag">Learning Method</p>
-                            <h3 class="course-reason-title">Regular Lab Practice</h3>
-                            <p class="course-reason-copy">Programming and application work are supported through practical sessions, assignments, and guided lab time.</p>
-                        </article>
-                        <article class="course-reason-card">
-                            <p class="course-reason-tag">Academic Base</p>
-                            <h3 class="course-reason-title">Strong Core Subjects</h3>
-                            <p class="course-reason-copy">Students build clarity in programming, databases, web development, and problem solving before moving to advanced topics.</p>
-                        </article>
-                        <article class="course-reason-card">
-                            <p class="course-reason-tag">Student Support</p>
-                            <h3 class="course-reason-title">Faculty Guidance</h3>
-                            <p class="course-reason-copy">Teachers support students in concepts, internal work, and project preparation throughout the course.</p>
-                        </article>
-                        <article class="course-reason-card">
-                            <p class="course-reason-tag">Next Step</p>
-                            <h3 class="course-reason-title">Career Or Higher Study</h3>
-                            <p class="course-reason-copy">The program supports both directions: entry-level work in IT roles and further study such as MCA or skill-based certifications.</p>
-                        </article>
-                    </div>
-                </section>
-
-                                    <!-- Apply CTA -->
-                <section class="course-cta-panel fade-up">
-                    <h2 class="text-3xl font-bold mb-4 section-title">Need details about BCA admission?</h2>
-                    <p class="course-cta-copy text-lg mb-8">For fees, required documents, or the admission process, you can contact the institute directly and get the latest guidance.</p>
-                    <div class="flex flex-col sm:flex-row justify-center gap-4">
-                        <a href="../contact.html" class="btn-primary px-8 py-3 rounded-lg">Enquire for BCA</a>
-                        <a href="../index.html" class="btn-secondary px-8 py-3 rounded-lg">Back to Home</a>
-                    </div>
-                </section>
                 </div>
+            </section>
+
+            <!-- Career Prospects Section -->
+            <section id="careers" class="py-16 bg-light fade-up border-y border-gray-200">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <p class="section-brow">Future Path</p>
+                        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-[#1E4ED8]">After the Course</h2>
+                        <p class="section-intro mt-6">After BCA, students often move toward junior technical roles, internships, skill-based certifications, or higher study such as MCA. The course gives a useful foundation, while regular practice and projects help shape the next step.</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                        <div class="card-box bg-white">
+                            <h3 class="text-2xl font-bold mb-6 text-gray-800 border-b pb-4">Common Starting Roles</h3>
+                            <ul class="space-y-4 text-gray-700">
+                                <li class="flex items-start">
+                                    <div class="bg-gray-100 rounded-full p-1 mr-3 shrink-0"><svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg></div>
+                                    <span class="font-medium">Junior Software Developer</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gray-100 rounded-full p-1 mr-3 shrink-0"><svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg></div>
+                                    <span class="font-medium">Web Developer</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gray-100 rounded-full p-1 mr-3 shrink-0"><svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg></div>
+                                    <span class="font-medium">QA or Testing Executive</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gray-100 rounded-full p-1 mr-3 shrink-0"><svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg></div>
+                                    <span class="font-medium">Technical Support Executive</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gray-100 rounded-full p-1 mr-3 shrink-0"><svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg></div>
+                                    <span class="font-medium">Junior Data or MIS Assistant</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-box bg-white">
+                            <h3 class="text-2xl font-bold mb-6 text-gray-800 border-b pb-4">Where Students May Work</h3>
+                            <ul class="space-y-4 text-gray-700">
+                                <li class="flex items-start">
+                                    <div class="bg-gray-100 rounded-full p-1 mr-3 shrink-0"><svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg></div>
+                                    <span class="font-medium">IT services and support companies</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gray-100 rounded-full p-1 mr-3 shrink-0"><svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg></div>
+                                    <span class="font-medium">Small software firms and startups</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gray-100 rounded-full p-1 mr-3 shrink-0"><svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg></div>
+                                    <span class="font-medium">Web and digital agencies</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gray-100 rounded-full p-1 mr-3 shrink-0"><svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg></div>
+                                    <span class="font-medium">E-commerce businesses</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gray-100 rounded-full p-1 mr-3 shrink-0"><svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg></div>
+                                    <span class="font-medium">Internal tech teams in other organizations</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Course Environment Section -->
+            <section id="why" class="py-16 bg-white fade-up">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <p class="section-brow">Student Experience</p>
+                        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-[#1E4ED8]">What Students Gain</h2>
+                        <p class="section-intro mt-6">Along with subjects, students usually value the routine, support, and practical exposure they receive during the course.</p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                        <div class="card-box bg-white border border-gray-100 hover-lift text-center">
+                            <div class="bg-blue-100 text-blue-700 font-bold text-xs uppercase tracking-wider py-1 px-3 rounded-full inline-block mb-4">Learning Method</div>
+                            <h3 class="text-xl font-bold mb-3 text-gray-800">Regular Lab Practice</h3>
+                            <p class="text-gray-600 text-sm">Programming and application work are supported through practical sessions, assignments, and guided lab time.</p>
+                        </div>
+                        <div class="card-box bg-white border border-gray-100 hover-lift text-center">
+                            <div class="bg-indigo-100 text-indigo-700 font-bold text-xs uppercase tracking-wider py-1 px-3 rounded-full inline-block mb-4">Academic Base</div>
+                            <h3 class="text-xl font-bold mb-3 text-gray-800">Strong Core Subjects</h3>
+                            <p class="text-gray-600 text-sm">Students build clarity in programming, databases, web development, and problem solving before moving to advanced topics.</p>
+                        </div>
+                        <div class="card-box bg-white border border-gray-100 hover-lift text-center">
+                            <div class="bg-blue-100 text-blue-700 font-bold text-xs uppercase tracking-wider py-1 px-3 rounded-full inline-block mb-4">Student Support</div>
+                            <h3 class="text-xl font-bold mb-3 text-gray-800">Faculty Guidance</h3>
+                            <p class="text-gray-600 text-sm">Teachers support students in concepts, internal work, and project preparation throughout the course.</p>
+                        </div>
+                        <div class="card-box bg-white border border-gray-100 hover-lift text-center">
+                            <div class="bg-indigo-100 text-indigo-700 font-bold text-xs uppercase tracking-wider py-1 px-3 rounded-full inline-block mb-4">Next Step</div>
+                            <h3 class="text-xl font-bold mb-3 text-gray-800">Career Or Higher Study</h3>
+                            <p class="text-gray-600 text-sm">The program supports both directions: entry-level work in IT roles and further study such as MCA or skill-based certifications.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Apply CTA -->
+            <section class="py-16 bg-blue-900 fade-up">
+                <div class="container mx-auto px-6 text-center text-white">
+                    <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-6">Need details about BCA admission?</h2>
+                    <p class="text-xl opacity-90 mb-10 max-w-2xl mx-auto">For fees, required documents, or the admission process, you can contact the institute directly and get the latest guidance.</p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="../contact.html" class="btn-primary" style="background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%) !important;">Enquire for BCA</a>
+                        <a href="../index.html" class="btn-secondary">Back to Home</a>
+                    </div>
+                </div>
+            </section>
+        </div>
             </div>
         </div>
 

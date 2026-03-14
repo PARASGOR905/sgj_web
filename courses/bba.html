@@ -69,251 +69,297 @@
 
     <main class="course-page-main">
         <!-- Hero Section -->
-        <section class="hero-section course-hero relative overflow-hidden">
-            <div class="container mx-auto px-6 text-center text-white">
-                <p class="section-brow course-hero-brow">Undergraduate Program</p>
-                <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">Bachelor of Business Administration</h1>
-                <p class="course-hero-copy text-lg md:text-xl mb-6">A 4-year undergraduate course focused on management basics, business communication, teamwork, and practical classroom learning.</p>
+        <section class="hero-section course-hero relative overflow-hidden page-hero-home">
+             <div class="absolute inset-0 bg-black/40"></div>
+             <div class="container mx-auto px-6 text-center text-white relative z-10 pt-12 md:pt-20">
+                <p class="text-sm md:text-base font-semibold text-[#ffd25c] uppercase tracking-widest mb-4">Undergraduate Program</p>
+                <h1 class="text-3xl md:text-5xl lg:text-5xl font-extrabold mb-4 leading-tight" style="color: #FFFFFF !important; text-shadow: 3px 3px 6px rgba(0,0,0,0.8);">Bachelor of Business Administration</h1>
+                <p class="course-hero-copy text-lg md:text-xl mb-6" style="color: #FFFFFF !important; text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">A 4-year undergraduate course focusing on business management, leadership, and professional skills for corporate careers or entrepreneurship.</p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
                     <a href="../contact.html" class="btn-primary text-center py-3 px-8 rounded-lg transition-all duration-300 hover:transform hover:-translate-y-1">Admission Enquiry</a>
                     <a href="../index.html" class="btn-secondary text-center py-3 px-8 rounded-lg transition-all duration-300 hover:transform hover:-translate-y-1">Back to Home</a>
                 </div>
-                <div class="course-hero-pills" aria-label="Course quick details">
-                    <div class="course-hero-pill">
-                        <span class="course-hero-pill-label">Duration</span>
-                        <span class="course-hero-pill-value">4 Years / 8 Semesters</span>
+                <!-- Hero Pills -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-16">
+                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl hover:bg-white/20 transition-all duration-300">
+                        <span class="block text-[#ffd25c] text-sm font-bold uppercase tracking-wider mb-2">Duration</span>
+                        <span class="block text-white text-lg font-bold">4 Years / 8 Semesters</span>
                     </div>
-                    <div class="course-hero-pill">
-                        <span class="course-hero-pill-label">Intake</span>
-                        <span class="course-hero-pill-value">100 Seats</span>
+                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl hover:bg-white/20 transition-all duration-300">
+                        <span class="block text-[#ffd25c] text-sm font-bold uppercase tracking-wider mb-2">Intake</span>
+                        <span class="block text-white text-lg font-bold">120 Seats</span>
                     </div>
-                    <div class="course-hero-pill">
-                        <span class="course-hero-pill-label">Eligibility</span>
-                        <span class="course-hero-pill-value">12th Pass</span>
+                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl hover:bg-white/20 transition-all duration-300">
+                        <span class="block text-[#ffd25c] text-sm font-bold uppercase tracking-wider mb-2">Eligibility</span>
+                        <span class="block text-white text-lg font-bold">12th Pass (Any Stream)</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class="container course-page-shell mx-auto px-6 py-12">
-            <!-- Main Content -->
-            <div>
-                                <!-- Overview Section -->
-                <section id="overview" class="course-panel course-panel-intro mb-16 fade-up">
-                    <p class="section-brow course-section-brow">Course Overview</p>
-                    <h2 class="text-3xl font-bold mb-6 section-title">About the Course</h2>
-                    <p class="course-section-copy mb-6">BBA is meant for students who want to understand how organizations work through subjects like management, marketing, finance, communication, and basic analytics. The course mixes theory with presentations, case-based discussion, and practical classroom activities.</p>
+        <!-- Main Content -->
+        <div>
+            <!-- Overview Section -->
+            <section id="overview" class="py-16 bg-white fade-up">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <p class="section-brow">Course Overview</p>
+                        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-[#1E4ED8]">About the Course</h2>
+                        <p class="section-intro mt-6">BBA is designed for students seeking a strong foundation in management principles and business administration. The course bridges theoretical knowledge with practical case studies, preparing students for executive roles, leadership, and entrepreneurial ventures.</p>
+                    </div>
 
-                    <div class="course-summary-grid mb-12">
-                        <div class="course-summary-card">
-                            <p class="course-summary-label">Duration</p>
-                            <p class="course-summary-value">4 years / 8 semesters</p>
-                            <p class="course-summary-note">Based on the current NEP and university course structure.</p>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="card-box text-center border border-blue-100 hover-lift">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-blue-700">Duration</h3>
+                            <p class="font-semibold text-gray-800 mb-2">4 years / 8 semesters</p>
+                            <p class="text-gray-500 text-sm">Based on the NEP framework providing a thorough business education.</p>
                         </div>
-                        <div class="course-summary-card">
-                            <p class="course-summary-label">Intake</p>
-                            <p class="course-summary-value">100 seats</p>
-                            <p class="course-summary-note">Seats are offered according to institute approval and admission norms.</p>
+                        <div class="card-box text-center border border-blue-100 hover-lift">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-blue-700">Intake</h3>
+                            <p class="font-semibold text-gray-800 mb-2">120 seats</p>
+                            <p class="text-gray-500 text-sm">Seats are offered per the latest university admission schedules.</p>
                         </div>
-                        <div class="course-summary-card">
-                            <p class="course-summary-label">Eligibility</p>
-                            <p class="course-summary-value">12th pass from a recognized board</p>
-                            <p class="course-summary-note">Suitable for students interested in business, communication, and management basics.</p>
+                        <div class="card-box text-center border border-blue-100 hover-lift">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-blue-700">Eligibility</h3>
+                            <p class="font-semibold text-gray-800 mb-2">12th pass (Any Stream)</p>
+                            <p class="text-gray-500 text-sm">Open to students from Commerce, Arts, or Science backgrounds.</p>
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
 
-                                    <!-- Eligibility Section -->
-                <section id="eligibility" class="course-panel course-panel-soft mb-16 fade-up">
-                    <p class="section-brow course-section-brow">Admission Basics</p>
-                    <h2 class="text-3xl font-bold mb-6 section-title">Basic Eligibility</h2>
-                    <p class="course-section-copy mb-6">Students should check the latest admission notice for documents, category rules, and any updated admission instructions.</p>
-                    <div class="course-info-card">
-                        <ul class="space-y-4 text-gray-700">
-                            <li class="flex items-start">
-                                <span class="text-green-600 font-bold mr-3">&#10003;</span>
-                                <span>Passed 12th standard from a recognized board</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-green-600 font-bold mr-3">&#10003;</span>
-                                <span>Minimum marks as per institute and university norms</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-green-600 font-bold mr-3">&#10003;</span>
-                                <span>Basic English understanding at SSC or HSC level</span>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-
-                                    <!-- Curriculum Section -->
-                <section id="curriculum" class="course-panel course-panel-soft mb-16 fade-up">
-                    <p class="section-brow course-section-brow">Study Areas</p>
-                    <h2 class="text-3xl font-bold mb-6 section-title">What You Will Study</h2>
-                    <p class="course-section-copy mb-6">The exact paper list can change under university guidelines, but these are the main areas students usually study during the BBA course.</p>
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <div class="course-info-card">
-                            <h3 class="text-xl font-bold mb-3">Core Subjects</h3>
-                            <ul class="space-y-3 text-gray-700">
+            <!-- Eligibility Section -->
+            <section id="eligibility" class="py-16 bg-light fade-up border-y border-gray-200">
+                <div class="container mx-auto px-6">
+                    <div class="max-w-4xl mx-auto">
+                        <p class="section-brow text-center">Admission Basics</p>
+                        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-center mb-8 text-[#1E4ED8]">Basic Eligibility</h2>
+                        <p class="section-intro text-center mb-10">Students should check the latest admission notice for specific criteria, required documents, and category-wise norms provided by the university.</p>
+                        
+                        <div class="card-box bg-white">
+                            <ul class="space-y-4 text-gray-700 text-lg">
                                 <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
+                                    <svg class="h-6 w-6 text-green-500 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                    <span>Passed 12th standard (HSC) or equivalent examination</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-6 w-6 text-green-500 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                    <span>Students from Commerce, Arts, or Science streams are eligible</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-6 w-6 text-green-500 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                    <span>English as a compulsory subject at HSC or SSC level</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-6 w-6 text-green-500 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                    <span>Minimum aggregate marks as specified by the university guidelines</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Curriculum Section -->
+            <section id="curriculum" class="py-16 bg-white fade-up">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <p class="section-brow">Study Areas</p>
+                        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-[#1E4ED8]">What You Will Study</h2>
+                        <p class="section-intro mt-6">The BBA curriculum covers a broad range of subjects intended to impart comprehensive business logic. Actual syllabi may be subject to university updates.</p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                        <div class="card-box bg-blue-50/50 border border-blue-100">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center shadow-lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                                </div>
+                                <h3 class="text-2xl font-bold text-blue-900">Core Subjects</h3>
+                            </div>
+                            <ul class="space-y-4 text-gray-700">
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-blue-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
                                     <span>Principles of Management</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Business Accounting and Basics of Finance</span>
+                                    <svg class="h-5 w-5 text-blue-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                    <span>Business Accounting & Economics</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Marketing Fundamentals</span>
+                                    <svg class="h-5 w-5 text-blue-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                    <span>Financial Management</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Business Economics</span>
+                                    <svg class="h-5 w-5 text-blue-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                    <span>Marketing Management</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
+                                    <svg class="h-5 w-5 text-blue-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
                                     <span>Human Resource Management</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
+                                    <svg class="h-5 w-5 text-blue-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                    <span>Business Environment & Ethics</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-box bg-blue-50/50 border border-blue-100">
+                             <div class="flex items-center gap-3 mb-6">
+                                <div class="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center shadow-lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                                </div>
+                                <h3 class="text-2xl font-bold text-indigo-900">Skill-Based Areas</h3>
+                            </div>
+                            <ul class="space-y-4 text-gray-700">
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-indigo-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
                                     <span>Business Communication</span>
                                 </li>
-                            </ul>
-                        </div>
-                        <div class="course-info-card">
-                            <h3 class="text-xl font-bold mb-3">Applied Areas</h3>
-                            <ul class="space-y-3 text-gray-700">
                                 <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Sales and customer relationship basics</span>
+                                    <svg class="h-5 w-5 text-indigo-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                    <span>Organizational Behavior</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Retail and operations management</span>
+                                    <svg class="h-5 w-5 text-indigo-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                    <span>Entrepreneurship Development</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Digital marketing basics</span>
+                                    <svg class="h-5 w-5 text-indigo-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                    <span>Business Law & Corporate Compliance</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Entrepreneurship and small business ideas</span>
+                                    <svg class="h-5 w-5 text-indigo-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                    <span>Computer Applications in Business</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Banking and finance basics</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Presentations, reports, and case discussions</span>
+                                    <svg class="h-5 w-5 text-indigo-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                    <span>Live Projects and Industrial Case Studies</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                </section>
-
-                                    <!-- Career Prospects Section -->
-                <section id="careers" class="course-panel course-panel-soft mb-16 fade-up">
-                    <p class="section-brow course-section-brow">Future Path</p>
-                    <h2 class="text-3xl font-bold mb-6 section-title">After the Course</h2>
-                    <p class="course-section-copy mb-6">After BBA, students often start with entry-level roles in sales, marketing support, operations, administration, or customer handling. Many students also continue with MBA or other postgraduate programs after building a clear base in business studies.</p>
-
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <div class="course-list-card">
-                            <h3 class="text-xl font-bold mb-4">Common Starting Roles</h3>
-                            <ul class="space-y-3 text-gray-700">
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Sales Executive</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Marketing Coordinator</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>HR Assistant</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Operations Executive</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Customer Relationship Executive</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="course-list-card">
-                            <h3 class="text-xl font-bold mb-4">Where Students May Work</h3>
-                            <ul class="space-y-3 text-gray-700">
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Retail and e-commerce businesses</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Banking and service companies</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Small and medium enterprises</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Startup teams</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Office administration and support departments</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <p class="course-note mt-6">Career growth in this field usually improves with communication skills, internship exposure, and practical workplace understanding.</p>
-                </section>
-
-                                                        <!-- Course Environment Section -->
-                <section id="why" class="course-panel course-panel-soft mb-16 fade-up">
-                    <p class="section-brow course-section-brow">Student Experience</p>
-                    <h2 class="text-3xl font-bold mb-6 section-title">What Students Gain</h2>
-                    <p class="course-section-copy mb-6">Along with subject knowledge, students usually value the communication practice, teamwork, and presentation confidence built during the course.</p>
-                    <div class="course-reasons-grid">
-                        <article class="course-reason-card">
-                            <p class="course-reason-tag">Learning Method</p>
-                            <h3 class="course-reason-title">Applied Business Learning</h3>
-                            <p class="course-reason-copy">Students connect classroom concepts with case discussions, presentations, and practical management exercises.</p>
-                        </article>
-                        <article class="course-reason-card">
-                            <p class="course-reason-tag">Skill Building</p>
-                            <h3 class="course-reason-title">Communication And Teamwork</h3>
-                            <p class="course-reason-copy">The course helps students improve speaking, writing, teamwork, and basic managerial decision-making.</p>
-                        </article>
-                        <article class="course-reason-card">
-                            <p class="course-reason-tag">Exposure</p>
-                            <h3 class="course-reason-title">Entrepreneurship And Events</h3>
-                            <p class="course-reason-copy">Students get opportunities to take part in presentations, business activities, and innovation-related events.</p>
-                        </article>
-                        <article class="course-reason-card">
-                            <p class="course-reason-tag">Next Step</p>
-                            <h3 class="course-reason-title">Jobs Or Higher Study</h3>
-                            <p class="course-reason-copy">The program provides a base for entry-level business roles and further study such as MBA or related postgraduate courses.</p>
-                        </article>
-                    </div>
-                </section>
-
-                                    <!-- Apply CTA -->
-                <section class="course-cta-panel fade-up">
-                    <h2 class="text-3xl font-bold mb-4 section-title">Need details about BBA admission?</h2>
-                    <p class="course-cta-copy text-lg mb-8">For fees, required documents, or the admission process, you can contact the institute directly and get the latest guidance.</p>
-                    <div class="flex flex-col sm:flex-row justify-center gap-4">
-                        <a href="../contact.html" class="btn-primary px-8 py-3 rounded-lg">Enquire for BBA</a>
-                        <a href="../index.html" class="btn-secondary px-8 py-3 rounded-lg">Back to Home</a>
-                    </div>
-                </section>
                 </div>
-            </div>
+            </section>
+
+            <!-- Career Prospects Section -->
+            <section id="careers" class="py-16 bg-light fade-up border-y border-gray-200">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <p class="section-brow">Future Path</p>
+                        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-[#1E4ED8]">After the Course</h2>
+                        <p class="section-intro mt-6">A BBA degree provides a recognized qualification for entry-level and junior executive roles across diverse industry sectors. It also serves as an excellent foundation for pursuing an MBA or starting one's own venture.</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                        <div class="card-box bg-white">
+                            <h3 class="text-2xl font-bold mb-6 text-gray-800 border-b pb-4">Common Starting Roles</h3>
+                            <ul class="space-y-4 text-gray-700">
+                                <li class="flex items-start">
+                                    <div class="bg-gray-100 rounded-full p-1 mr-3 shrink-0"><svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg></div>
+                                    <span class="font-medium">Management Trainee</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gray-100 rounded-full p-1 mr-3 shrink-0"><svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg></div>
+                                    <span class="font-medium">Marketing or Sales Executive</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gray-100 rounded-full p-1 mr-3 shrink-0"><svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg></div>
+                                    <span class="font-medium">HR Assistant / Recruiter</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gray-100 rounded-full p-1 mr-3 shrink-0"><svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg></div>
+                                    <span class="font-medium">Business Development Executive</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gray-100 rounded-full p-1 mr-3 shrink-0"><svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg></div>
+                                    <span class="font-medium">Financial Analyst or Operations Assistant</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-box bg-white">
+                            <h3 class="text-2xl font-bold mb-6 text-gray-800 border-b pb-4">Where Students May Work</h3>
+                            <ul class="space-y-4 text-gray-700">
+                                <li class="flex items-start">
+                                    <div class="bg-gray-100 rounded-full p-1 mr-3 shrink-0"><svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg></div>
+                                    <span class="font-medium">Banks and Financial Institutions</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gray-100 rounded-full p-1 mr-3 shrink-0"><svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg></div>
+                                    <span class="font-medium">Corporations and MNCs</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gray-100 rounded-full p-1 mr-3 shrink-0"><svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg></div>
+                                    <span class="font-medium">Marketing and PR Agencies</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gray-100 rounded-full p-1 mr-3 shrink-0"><svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg></div>
+                                    <span class="font-medium">Retail and E-commerce Companies</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gray-100 rounded-full p-1 mr-3 shrink-0"><svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg></div>
+                                    <span class="font-medium">Startups and their own entrepreneurial ventures</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Course Environment Section -->
+            <section id="why" class="py-16 bg-white fade-up">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <p class="section-brow">Student Experience</p>
+                        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-[#1E4ED8]">Why BBA at SGJ?</h2>
+                        <p class="section-intro mt-6">By choosing the BBA program here, students gain unique advantages that combine traditional learning with modern business realities.</p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                        <div class="card-box bg-white border border-gray-100 hover-lift text-center">
+                            <div class="bg-blue-100 text-blue-700 font-bold text-xs uppercase tracking-wider py-1 px-3 rounded-full inline-block mb-4">Leadership</div>
+                            <h3 class="text-xl font-bold mb-3 text-gray-800">Holistic Development</h3>
+                            <p class="text-gray-600 text-sm">Focuses strictly on communication skills, grooming, and forming a corporate mindset.</p>
+                        </div>
+                        <div class="card-box bg-white border border-gray-100 hover-lift text-center">
+                            <div class="bg-indigo-100 text-indigo-700 font-bold text-xs uppercase tracking-wider py-1 px-3 rounded-full inline-block mb-4">Innovation</div>
+                            <h3 class="text-xl font-bold mb-3 text-gray-800">SSIP Support</h3>
+                            <p class="text-gray-600 text-sm">Students interested in startups can utilize the institute's SSIP cell for mentoring and resources.</p>
+                        </div>
+                        <div class="card-box bg-white border border-gray-100 hover-lift text-center">
+                            <div class="bg-blue-100 text-blue-700 font-bold text-xs uppercase tracking-wider py-1 px-3 rounded-full inline-block mb-4">Exposure</div>
+                            <h3 class="text-xl font-bold mb-3 text-gray-800">Practical Approach</h3>
+                            <p class="text-gray-600 text-sm">Case studies, group discussions, and seminars offer insights into actual market scenarios.</p>
+                        </div>
+                        <div class="card-box bg-white border border-gray-100 hover-lift text-center">
+                            <div class="bg-indigo-100 text-indigo-700 font-bold text-xs uppercase tracking-wider py-1 px-3 rounded-full inline-block mb-4">Foundation</div>
+                            <h3 class="text-xl font-bold mb-3 text-gray-800">MBA Preparation</h3>
+                            <p class="text-gray-600 text-sm">Provides the ideal framework and conceptual clarity desired for highly competitive MBA programs.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Apply CTA -->
+            <section class="py-16 bg-blue-900 fade-up">
+                <div class="container mx-auto px-6 text-center text-white">
+                    <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-6">Need details about BBA admission?</h2>
+                    <p class="text-xl opacity-90 mb-10 max-w-2xl mx-auto">Contact us for the latest information on fees, document submission, and counseling dates.</p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="../contact.html" class="btn-primary" style="background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%) !important;">Enquire for BBA</a>
+                        <a href="../index.html" class="btn-secondary">Back to Home</a>
+                    </div>
+                </div>
+            </section>
         </div>
 
     </main>

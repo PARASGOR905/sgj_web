@@ -69,253 +69,298 @@
 
     <main class="course-page-main">
         <!-- Hero Section -->
-        <section class="hero-section course-hero relative overflow-hidden">
-            <div class="container mx-auto px-6 text-center text-white">
-                <p class="section-brow course-hero-brow">Undergraduate Program</p>
-                <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">Bachelor of Arts</h1>
-                <p class="course-hero-copy text-lg md:text-xl mb-6">A 4-year undergraduate course focused on humanities subjects, reading, writing, discussion, and broader social understanding.</p>
+        <section class="hero-section course-hero relative overflow-hidden page-hero-home">
+             <div class="absolute inset-0 bg-black/40"></div>
+             <div class="container mx-auto px-6 text-center text-white relative z-10 pt-12 md:pt-20">
+                <p class="text-sm md:text-base font-semibold text-[#ffd25c] uppercase tracking-widest mb-4">Undergraduate Program</p>
+                <h1 class="text-3xl md:text-5xl lg:text-5xl font-extrabold mb-4 leading-tight" style="color: #FFFFFF !important; text-shadow: 3px 3px 6px rgba(0,0,0,0.8);">Bachelor of Arts (English)</h1>
+                <p class="course-hero-copy text-lg md:text-xl mb-6" style="color: #FFFFFF !important; text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">A 4-year undergraduate course to build strong English communication, literature knowledge, and critical thinking for careers in teaching, media, or civil services.</p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
                     <a href="../contact.html" class="btn-primary text-center py-3 px-8 rounded-lg transition-all duration-300 hover:transform hover:-translate-y-1">Admission Enquiry</a>
                     <a href="../index.html" class="btn-secondary text-center py-3 px-8 rounded-lg transition-all duration-300 hover:transform hover:-translate-y-1">Back to Home</a>
                 </div>
-                <div class="course-hero-pills" aria-label="Course quick details">
-                    <div class="course-hero-pill">
-                        <span class="course-hero-pill-label">Duration</span>
-                        <span class="course-hero-pill-value">4 Years / 8 Semesters</span>
+                <!-- Hero Pills -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-16">
+                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl hover:bg-white/20 transition-all duration-300">
+                        <span class="block text-[#ffd25c] text-sm font-bold uppercase tracking-wider mb-2">Duration</span>
+                        <span class="block text-white text-lg font-bold">4 Years / 8 Semesters</span>
                     </div>
-                    <div class="course-hero-pill">
-                        <span class="course-hero-pill-label">Intake</span>
-                        <span class="course-hero-pill-value">100 Seats</span>
+                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl hover:bg-white/20 transition-all duration-300">
+                        <span class="block text-[#ffd25c] text-sm font-bold uppercase tracking-wider mb-2">Intake</span>
+                        <span class="block text-white text-lg font-bold">120 Seats</span>
                     </div>
-                    <div class="course-hero-pill">
-                        <span class="course-hero-pill-label">Eligibility</span>
-                        <span class="course-hero-pill-value">12th Pass</span>
+                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl hover:bg-white/20 transition-all duration-300">
+                        <span class="block text-[#ffd25c] text-sm font-bold uppercase tracking-wider mb-2">Eligibility</span>
+                        <span class="block text-white text-lg font-bold">12th Pass (Any Stream)</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class="container course-page-shell mx-auto px-6 py-12">
-            <!-- Main Content -->
-            <div>
-                                <!-- Overview Section -->
-                <section id="overview" class="course-panel course-panel-intro mb-16 fade-up">
-                    <p class="section-brow course-section-brow">Course Overview</p>
-                    <h2 class="text-3xl font-bold mb-6 section-title">About the Course</h2>
-                    <p class="course-section-copy mb-6">BA gives students a broad base in humanities and social sciences while improving reading, writing, analysis, and communication. It suits students who want a flexible degree that can support higher study, competitive exams, or communication-based work.</p>
+        <!-- Main Content -->
+        <div>
+            <!-- Overview Section -->
+            <section id="overview" class="py-16 bg-white fade-up">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <p class="section-brow">Course Overview</p>
+                        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-[#1E4ED8]">About the Course</h2>
+                        <p class="section-intro mt-6">BA with a focus on English gives students a deep understanding of language, literature, and effective communication. The program focuses on analytical skills, reading comprehension, and clear expression.</p>
+                    </div>
 
-                    <div class="course-summary-grid mb-12">
-                        <div class="course-summary-card">
-                            <p class="course-summary-label">Duration</p>
-                            <p class="course-summary-value">4 years / 8 semesters</p>
-                            <p class="course-summary-note">Based on the current NEP and university course structure.</p>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="card-box text-center border border-blue-100 hover-lift">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-blue-700">Duration</h3>
+                            <p class="font-semibold text-gray-800 mb-2">4 years / 8 semesters</p>
+                            <p class="text-gray-500 text-sm">Follows the NEP framework to provide a recognized degree in Arts.</p>
                         </div>
-                        <div class="course-summary-card">
-                            <p class="course-summary-label">Intake</p>
-                            <p class="course-summary-value">100 seats</p>
-                            <p class="course-summary-note">Seats are offered according to institute approval and admission norms.</p>
+                        <div class="card-box text-center border border-blue-100 hover-lift">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-blue-700">Intake</h3>
+                            <p class="font-semibold text-gray-800 mb-2">120 seats</p>
+                            <p class="text-gray-500 text-sm">Admissions depend on the university seat limits for the current session.</p>
                         </div>
-                        <div class="course-summary-card">
-                            <p class="course-summary-label">Eligibility</p>
-                            <p class="course-summary-value">12th pass from a recognized board</p>
-                            <p class="course-summary-note">Suitable for students interested in language, humanities, and social understanding.</p>
+                        <div class="card-box text-center border border-blue-100 hover-lift">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-blue-700">Eligibility</h3>
+                            <p class="font-semibold text-gray-800 mb-2">12th pass (Any Stream)</p>
+                            <p class="text-gray-500 text-sm">Any student interested in humanities and language can apply.</p>
                         </div>
                     </div>
-                </section>
-
-                                    <!-- Eligibility Section -->
-                <section id="eligibility" class="course-panel course-panel-soft mb-16 fade-up">
-                    <p class="section-brow course-section-brow">Admission Basics</p>
-                    <h2 class="text-3xl font-bold mb-6 section-title">Basic Eligibility</h2>
-                    <p class="course-section-copy mb-6">Students should check the latest admission notice for documents, category rules, and any updated admission instructions.</p>
-                    <div class="course-info-card">
-                        <ul class="space-y-4 text-gray-700">
-                            <li class="flex items-start">
-                                <span class="text-green-600 font-bold mr-3">&#10003;</span>
-                                <span>Passed 12th standard from a recognized board</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-green-600 font-bold mr-3">&#10003;</span>
-                                <span>Minimum marks as per institute and university norms</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-green-600 font-bold mr-3">&#10003;</span>
-                                <span>Basic English understanding at SSC or HSC level</span>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-
-                                    <!-- Curriculum Section -->
-                <section id="curriculum" class="course-panel course-panel-soft mb-16 fade-up">
-                    <p class="section-brow course-section-brow">Study Areas</p>
-                    <h2 class="text-3xl font-bold mb-6 section-title">What You Will Study</h2>
-                    <p class="course-section-copy mb-6">The exact paper list can change under university guidelines, but these are the main areas students usually study during the BA course.</p>
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <div class="course-info-card">
-                            <h3 class="text-xl font-bold mb-3">Core Subjects</h3>
-                            <ul class="space-y-3 text-gray-700">
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>English and communication</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>History and social context</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Political science and public understanding</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Economics basics</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Sociology and society-based topics</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Psychology-related foundations</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="course-info-card">
-                            <h3 class="text-xl font-bold mb-3">Skill Development</h3>
-                            <ul class="space-y-3 text-gray-700">
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Reading and note-making</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Writing assignments and reports</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Presentation and discussion practice</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Basic research and interpretation</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Communication and comprehension</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Analytical thinking</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
-                                    <!-- Career Prospects Section -->
-                <section id="careers" class="course-panel course-panel-soft mb-16 fade-up">
-                    <p class="section-brow course-section-brow">Future Path</p>
-                    <h2 class="text-3xl font-bold mb-6 section-title">After the Course</h2>
-                    <p class="course-section-copy mb-6">After BA, students often choose higher study, teacher-training pathways, competitive exam preparation, or roles that value communication and documentation. The course is broad, so the next step usually depends on the student&apos;s subject choice, interests, and further preparation.</p>
-
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <div class="course-list-card">
-                            <h3 class="text-xl font-bold mb-4">Common Starting Roles</h3>
-                            <ul class="space-y-3 text-gray-700">
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Content Writing or Editorial Support</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Office or Administrative Assistant</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Public Relations or Communication Support</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>NGO or Field Project Assistant</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Teaching pathways after further qualification</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="course-list-card">
-                            <h3 class="text-xl font-bold mb-4">Where Students May Work</h3>
-                            <ul class="space-y-3 text-gray-700">
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Education and training institutions</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Media and content services</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>NGOs and community organizations</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Public administration support offices</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 font-bold mr-2">&bull;</span>
-                                    <span>Corporate communication and documentation teams</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <p class="course-note mt-6">The next step after BA often depends on subject choice, writing ability, exam preparation, and any further qualification the student wants to pursue.</p>
-                </section>
-
-                                                        <!-- Course Environment Section -->
-                <section id="why" class="course-panel course-panel-soft mb-16 fade-up">
-                    <p class="section-brow course-section-brow">Student Experience</p>
-                    <h2 class="text-3xl font-bold mb-6 section-title">What Students Gain</h2>
-                    <p class="course-section-copy mb-6">Along with subject knowledge, students usually gain stronger communication, expression, and discussion habits during the course.</p>
-                    <div class="course-reasons-grid">
-                        <article class="course-reason-card">
-                            <p class="course-reason-tag">Academic Base</p>
-                            <h3 class="course-reason-title">Reading And Writing Skills</h3>
-                            <p class="course-reason-copy">Students develop stronger reading, writing, interpretation, and expression through regular academic work.</p>
-                        </article>
-                        <article class="course-reason-card">
-                            <p class="course-reason-tag">Subject Range</p>
-                            <h3 class="course-reason-title">Broad Discipline Exposure</h3>
-                            <p class="course-reason-copy">The program gives students a wider understanding of literature, history, politics, economics, and society.</p>
-                        </article>
-                        <article class="course-reason-card">
-                            <p class="course-reason-tag">Personal Growth</p>
-                            <h3 class="course-reason-title">Discussion And Presentation Practice</h3>
-                            <p class="course-reason-copy">The course supports confidence in speaking, presenting ideas, and participating in academic discussions.</p>
-                        </article>
-                        <article class="course-reason-card">
-                            <p class="course-reason-tag">Next Step</p>
-                            <h3 class="course-reason-title">Support For Exams And Higher Study</h3>
-                            <p class="course-reason-copy">The program gives a useful base for postgraduate study, public exams, and roles that need communication and analysis.</p>
-                        </article>
-                    </div>
-                </section>
-
-                                    <!-- Apply CTA -->
-                <section class="course-cta-panel fade-up">
-                    <h2 class="text-3xl font-bold mb-4 section-title">Need details about BA admission?</h2>
-                    <p class="course-cta-copy text-lg mb-8">For fees, required documents, or the admission process, you can contact the institute directly and get the latest guidance.</p>
-                    <div class="flex flex-col sm:flex-row justify-center gap-4">
-                        <a href="../contact.html" class="btn-primary px-8 py-3 rounded-lg">Enquire for BA</a>
-                        <a href="../index.html" class="btn-secondary px-8 py-3 rounded-lg">Back to Home</a>
-                    </div>
-                </section>
                 </div>
-            </div>
-        </div>
+            </section>
 
+            <!-- Eligibility Section -->
+            <section id="eligibility" class="py-16 bg-light fade-up border-y border-gray-200">
+                <div class="container mx-auto px-6">
+                    <div class="max-w-4xl mx-auto">
+                        <p class="section-brow text-center">Admission Basics</p>
+                        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-center mb-8 text-[#1E4ED8]">Basic Eligibility</h2>
+                        <p class="section-intro text-center mb-10">Students must verify exact documents and subject percentage requirements through the university admission portal.</p>
+                        
+                        <div class="card-box bg-white">
+                            <ul class="space-y-4 text-gray-700 text-lg">
+                                <li class="flex items-start">
+                                    <svg class="h-6 w-6 text-green-500 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                    <span>Passed 12th standard (HSC) or equivalent</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-6 w-6 text-green-500 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                    <span>Open to students from Arts, Commerce, or Science</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-6 w-6 text-green-500 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                    <span>English is usually required as a subject at the HSC level</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-6 w-6 text-green-500 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                    <span>Minimum marks subject to current admission norms</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Curriculum Section -->
+            <section id="curriculum" class="py-16 bg-white fade-up">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <p class="section-brow">Study Areas</p>
+                        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-[#1E4ED8]">What You Will Study</h2>
+                        <p class="section-intro mt-6">While exact courses may vary with the university syllabus, a BA gives students a well-rounded foundation in literature, history, and language.</p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                        <div class="card-box bg-blue-50/50 border border-blue-100">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center shadow-lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                                </div>
+                                <h3 class="text-2xl font-bold text-blue-900">Literature & Language</h3>
+                            </div>
+                            <ul class="space-y-4 text-gray-700">
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-blue-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                    <span>History of English Literature</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-blue-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                    <span>Poetry, Drama, and Prose</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-blue-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                    <span>Indian Writing in English</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-blue-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                    <span>Phonetics and Linguistics</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-blue-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                    <span>Literary Theory and Criticism</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-blue-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                    <span>Grammar and Advanced Composition</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-box bg-blue-50/50 border border-blue-100">
+                             <div class="flex items-center gap-3 mb-6">
+                                <div class="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center shadow-lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                                </div>
+                                <h3 class="text-2xl font-bold text-indigo-900">Applied Skills</h3>
+                            </div>
+                            <ul class="space-y-4 text-gray-700">
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-indigo-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                    <span>Communication Skills and Spoken English</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-indigo-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                    <span>Creative Writing and Drafting</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-indigo-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                    <span>Translation Studies</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-indigo-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                    <span>Mass Communication basics</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-indigo-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                    <span>Research Methodology for Arts</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-indigo-600 mr-3 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                    <span>Presentations and Essay Writing</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Career Prospects Section -->
+            <section id="careers" class="py-16 bg-light fade-up border-y border-gray-200">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <p class="section-brow">Future Path</p>
+                        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-[#1E4ED8]">After the Course</h2>
+                        <p class="section-intro mt-6">A BA degree offers diverse career paths ranging from education and journalism to corporate communication and government sector preparation.</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                        <div class="card-box bg-white">
+                            <h3 class="text-2xl font-bold mb-6 text-gray-800 border-b pb-4">Common Jobs / Higher Study</h3>
+                            <ul class="space-y-4 text-gray-700">
+                                <li class="flex items-start">
+                                    <div class="bg-gray-100 rounded-full p-1 mr-3 shrink-0"><svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg></div>
+                                    <span class="font-medium">Teaching (with B.Ed or MA)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gray-100 rounded-full p-1 mr-3 shrink-0"><svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg></div>
+                                    <span class="font-medium">Content Writer / Copywriter</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gray-100 rounded-full p-1 mr-3 shrink-0"><svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg></div>
+                                    <span class="font-medium">Journalist / Media Professional</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gray-100 rounded-full p-1 mr-3 shrink-0"><svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg></div>
+                                    <span class="font-medium">Public Relations Executive</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gray-100 rounded-full p-1 mr-3 shrink-0"><svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg></div>
+                                    <span class="font-medium">HR or Administrative Executive</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-box bg-white">
+                            <h3 class="text-2xl font-bold mb-6 text-gray-800 border-b pb-4">Where Students May Work</h3>
+                            <ul class="space-y-4 text-gray-700">
+                                <li class="flex items-start">
+                                    <div class="bg-gray-100 rounded-full p-1 mr-3 shrink-0"><svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg></div>
+                                    <span class="font-medium">Schools and Educational Institutions</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gray-100 rounded-full p-1 mr-3 shrink-0"><svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg></div>
+                                    <span class="font-medium">Media houses, Newspapers, and Digital Platforms</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gray-100 rounded-full p-1 mr-3 shrink-0"><svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg></div>
+                                    <span class="font-medium">Publishing Companies</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gray-100 rounded-full p-1 mr-3 shrink-0"><svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg></div>
+                                    <span class="font-medium">Corporate Communication Departments</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gray-100 rounded-full p-1 mr-3 shrink-0"><svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg></div>
+                                    <span class="font-medium">Government Sector (UPSC, GPSC prep)</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Course Environment Section -->
+            <section id="why" class="py-16 bg-white fade-up">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <p class="section-brow">Student Experience</p>
+                        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-[#1E4ED8]">Why BA at SGJ?</h2>
+                        <p class="section-intro mt-6">Studying BA at SGJ means an environment where academic reading is paired with discipline and confidence-building activities.</p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                        <div class="card-box bg-white border border-gray-100 hover-lift text-center">
+                            <div class="bg-blue-100 text-blue-700 font-bold text-xs uppercase tracking-wider py-1 px-3 rounded-full inline-block mb-4">Competitions</div>
+                            <h3 class="text-xl font-bold mb-3 text-gray-800">Skill Building</h3>
+                            <p class="text-gray-600 text-sm">Opportunities in debate, recitation, essay writing, and language-based events help build confidence.</p>
+                        </div>
+                        <div class="card-box bg-white border border-gray-100 hover-lift text-center">
+                            <div class="bg-indigo-100 text-indigo-700 font-bold text-xs uppercase tracking-wider py-1 px-3 rounded-full inline-block mb-4">Preparation</div>
+                            <h3 class="text-xl font-bold mb-3 text-gray-800">Govt Exams Base</h3>
+                            <p class="text-gray-600 text-sm">The course provides a good routine and knowledge base for students targeting civil services or state exams.</p>
+                        </div>
+                        <div class="card-box bg-white border border-gray-100 hover-lift text-center">
+                            <div class="bg-blue-100 text-blue-700 font-bold text-xs uppercase tracking-wider py-1 px-3 rounded-full inline-block mb-4">Community</div>
+                            <h3 class="text-xl font-bold mb-3 text-gray-800">NCC / NSS Unit</h3>
+                            <p class="text-gray-600 text-sm">Students can join these units for discipline, leadership, and contributing to social activities.</p>
+                        </div>
+                        <div class="card-box bg-white border border-gray-100 hover-lift text-center">
+                            <div class="bg-indigo-100 text-indigo-700 font-bold text-xs uppercase tracking-wider py-1 px-3 rounded-full inline-block mb-4">Support</div>
+                            <h3 class="text-xl font-bold mb-3 text-gray-800">Faculty Support</h3>
+                            <p class="text-gray-600 text-sm">Guided readings and conceptual discussions with dedicated English faculty members.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Apply CTA -->
+            <section class="py-16 bg-blue-900 fade-up">
+                <div class="container mx-auto px-6 text-center text-white">
+                    <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-6">Need details about BA admission?</h2>
+                    <p class="text-xl opacity-90 mb-10 max-w-2xl mx-auto">Contact the institute office to get detailed information about subjects, fees, and the admission dates.</p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="../contact.html" class="btn-primary" style="background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%) !important;">Enquire for BA</a>
+                        <a href="../index.html" class="btn-secondary">Back to Home</a>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
     <div id="footer-placeholder"></div>
