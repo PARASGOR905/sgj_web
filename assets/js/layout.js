@@ -16,12 +16,6 @@ function getCurrentPage() {
     return window.location.pathname.split('/').pop() || 'index.html';
 }
 
-function getApplyHref(pathPrefix) {
-    return getCurrentPage() === 'contact.html'
-        ? '#contact-form'
-        : `${pathPrefix}contact.html#contact-form`;
-}
-
 // Load Header
 function loadHeader() {
     const headerPlaceholder = document.getElementById('header-placeholder');
@@ -29,8 +23,6 @@ function loadHeader() {
     if (headerPlaceholder.dataset.loaded === 'true') return;
 
     const pathPrefix = getPathPrefix();
-    const applyHref = getApplyHref(pathPrefix);
-
     const header = document.createElement('header');
     header.className = 'sticky top-0 shadow-md simple-theme';
     header.style.backgroundColor = 'var(--primary)';
@@ -39,19 +31,14 @@ function loadHeader() {
     header.style.zIndex = '11000';
 
     header.innerHTML = `
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3 min-w-0">
-            <div class="flex min-w-0 items-center gap-3 sm:gap-4">
-                <div class="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-lg shadow-sm flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 sm:w-8 sm:h-8 text-[#0B3C5D]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-                  </svg>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex items-center justify-between gap-3 min-w-0 md:flex-row md:justify-between md:gap-8">
+            <div class="flex min-w-0 items-center gap-3 sm:gap-4 md:justify-start md:flex-shrink-0">
+                <div class="flex items-center justify-center w-auto h-10 sm:h-12 flex-shrink-0">
+                  <img src="${pathPrefix}assets/images/SGJ_LOGO.png" alt="SGJ Institute Logo" class="h-full w-auto object-contain">
                 </div>
                 <div class="min-w-0 leading-tight">
-                  <span class="block font-bold text-white text-sm sm:text-lg truncate">SGJ Institute</span>
-                  <span class="block text-[10px] sm:text-sm text-[#FFC107] truncate">Management &amp; IT</span>
+                  <span class="block font-extrabold text-white text-base sm:text-lg tracking-wide truncate">SGJ Institute</span>
+                  <span class="block text-[10px] sm:text-xs font-semibold tracking-widest uppercase text-yellow-400 truncate mt-0.5">Management &amp; IT</span>
                 </div>
             </div>
 
@@ -61,22 +48,13 @@ function loadHeader() {
                 </svg>
             </button>
 
-            <nav id="main-nav" class="md:flex items-center gap-6 text-white font-medium flex-col md:flex-row absolute md:static top-full left-0 w-full md:w-auto bg-[var(--primary)] md:bg-transparent px-4 pb-4 md:px-0 md:pb-0 space-y-2 md:space-y-0" role="navigation" aria-label="Main navigation">
-                <a href="${pathPrefix}index.html" class="nav-link hover:text-white transition duration-300 px-3 py-2 rounded-lg hover:bg-[var(--accent)]/30 text-[var(--accent)]">Home</a>
-                <a href="${pathPrefix}about.html" class="nav-link hover:text-white transition duration-300 px-3 py-2 rounded-lg hover:bg-[var(--accent)]/30 text-[var(--accent)]">About</a>
-                <a href="${pathPrefix}gallery.html" class="nav-link hover:text-white transition duration-300 px-3 py-2 rounded-lg hover:bg-[var(--accent)]/30 text-[var(--accent)]">Gallery</a>
-                <a href="${pathPrefix}downloads.html" class="nav-link hover:text-white transition duration-300 px-3 py-2 rounded-lg hover:bg-[var(--accent)]/30 text-[var(--accent)]">Downloads</a>
-                <a href="${pathPrefix}contact.html" class="nav-link hover:text-white transition duration-300 px-3 py-2 rounded-lg hover:bg-[var(--accent)]/30 text-[var(--accent)]">Contact</a>
-                <a href="${applyHref}" class="mobile-cta-link md:hidden mt-2 w-full text-center font-semibold rounded-lg bg-[var(--accent)] text-[var(--primary)] p-2">
-                    Admission Form
-                </a>
+            <nav id="main-nav" class="flex flex-col md:flex-row absolute md:static top-full left-0 w-full md:w-auto bg-[var(--primary)] md:bg-transparent shadow-lg md:shadow-none" role="navigation" aria-label="Main navigation">
+                <a href="${pathPrefix}index.html" class="nav-link text-white hover:text-[var(--accent)] transition-colors duration-300 px-5 py-2.5 rounded-lg hover:bg-white/10 font-semibold text-sm md:text-base block">Home</a>
+                <a href="${pathPrefix}about.html" class="nav-link text-white hover:text-[var(--accent)] transition-colors duration-300 px-5 py-2.5 rounded-lg hover:bg-white/10 font-semibold text-sm md:text-base block">About</a>
+                <a href="${pathPrefix}gallery.html" class="nav-link text-white hover:text-[var(--accent)] transition-colors duration-300 px-5 py-2.5 rounded-lg hover:bg-white/10 font-semibold text-sm md:text-base block">Gallery</a>
+                <a href="${pathPrefix}downloads.html" class="nav-link text-white hover:text-[var(--accent)] transition-colors duration-300 px-5 py-2.5 rounded-lg hover:bg-white/10 font-semibold text-sm md:text-base block">Resources</a>
+                <a href="${pathPrefix}contact.html" class="nav-link text-white hover:text-[var(--accent)] transition-colors duration-300 px-5 py-2.5 rounded-lg hover:bg-white/10 font-semibold text-sm md:text-base block">Contact</a>
             </nav>
-
-            <div class="hidden md:flex items-center ml-4 flex-shrink-0">
-                <a href="${applyHref}" class="btn-header font-semibold transition-all duration-300 hover:scale-105 shadow-lg whitespace-nowrap bg-[var(--accent)] text-[var(--primary)] p-2.5 rounded-lg">
-                    Apply Now
-                </a>
-            </div>
         </div>
     `;
 
@@ -95,12 +73,12 @@ function loadFooter() {
     const pathPrefix = getPathPrefix();
 
     const footer = document.createElement('footer');
-    footer.className = 'text-dark simple-theme';
+    footer.className = 'text-white simple-theme';
     footer.style.backgroundColor = 'var(--bg-dark)';
     footer.style.borderTop = '1px solid var(--border-light)';
 
     footer.innerHTML = `
-        <div class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-8">
+        <div class="max-w-7xl mx-auto px-6 py-8 grid md:grid-cols-3 gap-8">
             <div>
                 <h3 class="text-white font-semibold mb-3">
                     SGJ Institute of Management & IT
@@ -114,21 +92,21 @@ function loadFooter() {
             <div>
                 <h3 class="text-white font-semibold mb-3" style="color: white !important; font-weight: 600 !important;">Quick Links</h3>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="${pathPrefix}index.html" class="hover:text-[var(--accent)]" style="color: var(--text-light);">Home</a></li>
-                    <li><a href="${pathPrefix}about.html" class="hover:text-[var(--accent)]" style="color: var(--text-light);">About</a></li>
-                    <li><a href="${pathPrefix}gallery.html" class="hover:text-[var(--accent)]" style="color: var(--text-light);">Gallery</a></li>
-                    <li><a href="${pathPrefix}downloads.html" class="hover:text-[var(--accent)]" style="color: var(--text-light);">Downloads</a></li>
-                    <li><a href="${pathPrefix}contact.html" class="hover:text-[var(--accent)]" style="color: var(--text-light);">Contact</a></li>
+                    <li><a href="${pathPrefix}index.html" class="hover:text-[var(--accent)]" style="color: #E5E7EB !important;">Home</a></li>
+                    <li><a href="${pathPrefix}about.html" class="hover:text-[var(--accent)]" style="color: #E5E7EB !important;">About</a></li>
+                    <li><a href="${pathPrefix}gallery.html" class="hover:text-[var(--accent)]" style="color: #E5E7EB !important;">Gallery</a></li>
+                    <li><a href="${pathPrefix}downloads.html" class="hover:text-[var(--accent)]" style="color: #E5E7EB !important;">Resources</a></li>
+                    <li><a href="${pathPrefix}contact.html" class="hover:text-[var(--accent)]" style="color: #E5E7EB !important;">Contact</a></li>
                 </ul>
             </div>
 
             <div>
-                <h3 class="text-white font-semibold mb-3">Contact</h3>
-                <p class="text-sm">
+                <h3 class="text-white font-semibold mb-3" style="color: white !important;">Contact</h3>
+                <p class="text-sm" style="color: #E5E7EB !important;">
                     Shree Swaminarayan Gurukul<br>
                     Mandvi, Kutch, Gujarat<br><br>
-                    Phone: <a href="tel:+919099987846" class="hover:text-[var(--accent)]">+91 9099987846</a><br>
-                    Email: <a href="mailto:info@sgjcollege.in" class="hover:text-[var(--accent)]">info@sgjcollege.in</a>
+                    Phone: <a href="tel:+919099987846" class="hover:text-[var(--accent)]" style="color: #F8FAFC !important;">+91 9099987846</a><br>
+                    Email: <a href="mailto:info@sgjcollege.in" class="hover:text-[var(--accent)]" style="color: #F8FAFC !important;">info@sgjcollege.in</a>
                 </p>
             </div>
         </div>

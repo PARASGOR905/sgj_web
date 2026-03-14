@@ -3,90 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About SGJ Institute of Management & IT - Kutch College</title>
-    <meta name="description" content="Learn about SGJ Institute of Management & IT in Kutch. Discover our mission, vision, values, and commitment to quality education and student development.">
-    <meta name="keywords" content="SGJ College About, Kutch Institute, Management Education, IT College Mandvi, About SGJ Institution">
-    <meta name="author" content="SGJ Institute of Management & IT">
-    <meta name="theme-color" content="#0B3C5D">
-    <meta name="msapplication-TileColor" content="#0B3C5D">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>About Us | SGJ Institute of Management & IT</title>
+    <meta name="description" content="Learn about SGJ Institute of Management & IT, our mission, vision, core values, and our commitment to academic excellence in Kutch.">
+    
+    <!-- Preconnect to external domains for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="icon" href="./assets/images/SGJ%20COLLEGE.png" type="image/png">
-
+    <link rel="icon" href="./assets/images/SGJ_LOGO.png" type="image/png">
+    
+    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Config -->
     <script src="./assets/js/tailwind-config.js"></script>
-
-    <link rel="stylesheet" href="./assets/css/style.css?v=4.3">
+    
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="./assets/css/style.css?v=4.4">
     <link rel="canonical" href="https://sgjcollege.in/about.html">
     
-    <!-- College Schema -->
+    <!-- Structured Data for About Page -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "College",
-      "name": "SGJ Institute of Management & IT",
-      "alternateName": "SGJ College Kodaypul",
-      "url": "https://sgjcollege.in",
-      "logo": "https://sgjcollege.in/assets/images/SGJ%20COLLEGE.png",
-      "image": "https://sgjcollege.in/assets/images/SGJ%20COLLEGE.png",
-      "telephone": "+91-9099987846",
-      "email": "info@sgjcollege.in",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Shree Swaminarayan Gurukul, Kodaypul, Bhuj-Mandvi Highway",
-        "addressLocality": "Mandvi",
-        "addressRegion": "Gujarat",
-        "postalCode": "370465",
-        "addressCountry": "IN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 23.012944,
-        "longitude": 69.211389
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-          ],
-          "opens": "09:00",
-          "closes": "17:00"
-        }
-      ],
-      "description": "SGJ Institute of Management & IT offers BCA, BBA, and BA programs with NCC, NSS, Naval Training, and SSIP facilities in Kutch, Gujarat."
-    }
-    </script>
-    
-    <!-- FAQ Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the mission of SGJ College?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Our mission is to provide quality education that fosters intellectual growth, ethical values, and practical skills to prepare students for successful careers and responsible citizenship."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What makes SGJ College unique?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "SGJ College stands out as the only self-financed SSIP Grantee institute in Kutch, offering unique programs like Naval Training alongside traditional academic disciplines with strong industry connections."
-          }
-        }
-      ]
+      "@type": "AboutPage",
+      "mainEntity": {
+        "@type": "EducationalOrganization",
+        "name": "SGJ Institute of Management & IT",
+        "foundingDate": "2010",
+        "knowsAbout": ["BCA", "BBA", "BA", "Information Technology", "Business Management", "Arts"],
+        "description": "SGJ Institute is a premier educational institution in Kutch dedicated to shaping future leaders through quality education and holistic development."
+      }
     }
     </script>
 </head>
@@ -96,14 +43,9 @@
     <main>
         <!-- Hero Section -->
         <section class="hero-section relative overflow-hidden" style="background: linear-gradient(135deg, #0B3C5D 0%, #1D70B8 100%) !important;">
-                    <!-- Subtle scrapbook element -->
-                    <div class="absolute top-8 right-8 opacity-10 rotate-12">
-                        <svg width="80" height="80" viewBox="0 0 100 100" class="text-white fill-current">
-                            <path d="M10,50 Q25,10 50,50 T90,50" stroke="currentColor" fill="none" stroke-width="2"/>
-                        </svg>
-                    </div>
+
             <div class="container mx-auto px-6 text-center text-white">
-                <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">About SGJ Institute of Management & IT</h1>
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">About SGJ Institute of Management &amp; IT</h1>
                 <p class="text-xl mb-6 opacity-90">A premier educational institution in Kutch dedicated to shaping future leaders through quality education and holistic development.</p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
                     <a href="./contact.html" class="btn-primary px-8 py-3 rounded-lg font-semibold transition duration-300">Apply Now</a>
@@ -113,14 +55,14 @@
         </section>
 
         <!-- Mission Vision Section -->
-        <section class="py-24 bg-white fade-up">
+        <section class="py-10 bg-white fade-up">
             <div class="container mx-auto px-6">
                 <div class="grid md:grid-cols-2 gap-12">
-                    <div class="bg-blue-50 p-8 rounded-2xl border border-blue-200">
+                    <div class="card-box bg-blue-50 border border-blue-200">
                         <h2 class="text-3xl font-bold mb-6 text-blue-700">Our Mission</h2>
                         <p class="text-gray-700 leading-relaxed">To provide quality higher education that nurtures intellectual curiosity, develops critical thinking abilities, and instills ethical values while preparing students for successful careers and responsible citizenship in a rapidly changing world.</p>
                     </div>
-                    <div class="bg-blue-50 p-8 rounded-2xl border border-blue-200">
+                    <div class="card-box bg-blue-50 border border-blue-200">
                         <h2 class="text-3xl font-bold mb-6 text-blue-700">Our Vision</h2>
                         <p class="text-gray-700 leading-relaxed">To become a center of excellence in management and IT education, recognized for innovative teaching methodologies, industry-relevant curriculum, and producing graduates who contribute meaningfully to society and the global economy.</p>
                     </div>
@@ -129,11 +71,11 @@
         </section>
 
         <!-- Values Section -->
-        <section class="py-24 bg-light fade-up">
+        <section class="py-10 bg-light fade-up">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-center mb-12 text-[#1E4ED8]">Our Core Values</h2>
                 <div class="grid md:grid-cols-3 gap-8">
-                    <div class="text-center bg-white p-8 rounded-xl shadow-lg hover-lift">
+                    <div class="card-box flex flex-col items-center text-center">
                         <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -142,7 +84,7 @@
                         <h3 class="text-xl font-bold mb-3 text-blue-700">Integrity</h3>
                         <p class="text-gray-600">Upholding the highest standards of honesty, ethics, and moral principles in all our endeavors.</p>
                     </div>
-                    <div class="text-center bg-white p-8 rounded-xl shadow-lg hover-lift">
+                    <div class="card-box flex flex-col items-center text-center">
                         <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -151,7 +93,7 @@
                         <h3 class="text-xl font-bold mb-3 text-blue-700">Excellence</h3>
                         <p class="text-gray-600">Striving for continuous improvement and delivering outstanding educational experiences.</p>
                     </div>
-                    <div class="text-center bg-white p-8 rounded-xl shadow-lg hover-lift">
+                    <div class="card-box flex flex-col items-center text-center">
                         <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -165,42 +107,111 @@
         </section>
 
         <!-- Leadership Section -->
-        <section class="py-24 bg-white fade-up">
+        <section class="py-10 bg-white fade-up">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-center mb-12 text-[#1E4ED8]">Our Leadership</h2>
-                <div class="max-w-4xl mx-auto">
-                    <div class="bg-gray-50 p-8 rounded-2xl border border-blue-200">
-                        <div class="flex items-start gap-6">
-                            <div class="bg-gray-200 border-2 border-dashed rounded-xl w-24 h-24 flex-shrink-0" role="img" aria-label="Principal"></div>
-                            <div>
-                                <h3 class="text-2xl font-bold text-blue-700 mb-2">Dr. [Principal Name]</h3>
-                                <p class="text-blue-600 font-semibold mb-3">Principal</p>
-                                <p class="text-gray-700 leading-relaxed">With over 20 years of experience in higher education, Dr. [Name] leads SGJ Institute with a vision of academic excellence and student-centered learning. Under his leadership, the institute has achieved significant milestones including SSIP Grantee status and establishment of various student development programs.</p>
+                <div class="max-w-6xl mx-auto relative cursor-ew-resize">
+                    <!-- Marquee Container -->
+                    <div class="marquee-container py-4">
+                        <div class="marquee-track gap-6">
+                            
+                            <!-- ============================== -->
+                            <!-- SET 1 (Original Content)       -->
+                            <!-- ============================== -->
+                            
+                            <!-- Slide 1: Director Sir -->
+                            <div class="w-[300px] md:w-[600px] flex-shrink-0">
+                                <div class="card-box bg-gray-50 border border-blue-200 h-full !transform-none !transition-none hover:!shadow-lg">
+                                    <div class="flex flex-col md:flex-row items-start md:items-center gap-6 h-full">
+                                        <div class="bg-gray-200 border-2 border-dashed rounded-xl w-32 h-32 flex-shrink-0 mx-auto md:mx-0 flex flex-col justify-center items-center text-gray-400 text-sm p-2 text-center" role="img" aria-label="Director image placeholder">
+                                            <span>Director Image Here</span>
+                                        </div>
+                                        <div class="text-center md:text-left flex-1">
+                                            <h3 class="text-2xl font-bold text-blue-700 mb-2">Director Sir</h3>
+                                            <p class="text-blue-600 font-semibold mb-3">Director</p>
+                                            <p class="text-gray-700 leading-relaxed text-sm md:text-base">With over 20 years of experience in higher education, our Director leads SGJ Institute with a vision of academic excellence and student-centered learning. Under his leadership, the institute has achieved significant milestones including SSIP Grantee status and establishment of various student development programs.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+
+                            <!-- Slide 2: Swamiji -->
+                            <div class="w-[300px] md:w-[600px] flex-shrink-0">
+                                <div class="card-box bg-gray-50 border border-blue-200 h-full !transform-none !transition-none hover:!shadow-lg">
+                                    <div class="flex flex-col md:flex-row items-start md:items-center gap-6 h-full">
+                                        <div class="bg-gray-200 border-2 border-dashed rounded-xl w-32 h-32 flex-shrink-0 mx-auto md:mx-0 flex flex-col justify-center items-center text-gray-400 text-sm p-2 text-center" role="img" aria-label="Swamiji image placeholder">
+                                            <span>Swamiji Image Here</span>
+                                        </div>
+                                        <div class="text-center md:text-left flex-1">
+                                            <h3 class="text-2xl font-bold text-blue-700 mb-2">Swamiji</h3>
+                                            <p class="text-blue-600 font-semibold mb-3">Spiritual Guide & Mentor</p>
+                                            <p class="text-gray-700 leading-relaxed text-sm md:text-base">Providing spiritual guidance, profound wisdom, and a strong moral foundation to our educational framework. Swamiji ensures that students not only excel in modern academics and technology but also stay deeply rooted in ethical values, community service, and holistic personal growth.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- ============================== -->
+                            <!-- SET 2 (Cloned for Loop)        -->
+                            <!-- ============================== -->
+                            
+                            <!-- Slide 3: Director Sir (CLONE) -->
+                            <div class="w-[300px] md:w-[600px] flex-shrink-0" aria-hidden="true">
+                                <div class="card-box bg-gray-50 border border-blue-200 h-full !transform-none !transition-none hover:!shadow-lg">
+                                    <div class="flex flex-col md:flex-row items-start md:items-center gap-6 h-full">
+                                        <div class="bg-gray-200 border-2 border-dashed rounded-xl w-32 h-32 flex-shrink-0 mx-auto md:mx-0 flex flex-col justify-center items-center text-gray-400 text-sm p-2 text-center" role="img" aria-label="Director image placeholder">
+                                            <span>Director Image Here</span>
+                                        </div>
+                                        <div class="text-center md:text-left flex-1">
+                                            <h3 class="text-2xl font-bold text-blue-700 mb-2">Director Sir</h3>
+                                            <p class="text-blue-600 font-semibold mb-3">Director</p>
+                                            <p class="text-gray-700 leading-relaxed text-sm md:text-base">With over 20 years of experience in higher education, our Director leads SGJ Institute with a vision of academic excellence and student-centered learning. Under his leadership, the institute has achieved significant milestones including SSIP Grantee status and establishment of various student development programs.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 4: Swamiji (CLONE) -->
+                            <div class="w-[300px] md:w-[600px] flex-shrink-0" aria-hidden="true">
+                                <div class="card-box bg-gray-50 border border-blue-200 h-full !transform-none !transition-none hover:!shadow-lg">
+                                    <div class="flex flex-col md:flex-row items-start md:items-center gap-6 h-full">
+                                        <div class="bg-gray-200 border-2 border-dashed rounded-xl w-32 h-32 flex-shrink-0 mx-auto md:mx-0 flex flex-col justify-center items-center text-gray-400 text-sm p-2 text-center" role="img" aria-label="Swamiji image placeholder">
+                                            <span>Swamiji Image Here</span>
+                                        </div>
+                                        <div class="text-center md:text-left flex-1">
+                                            <h3 class="text-2xl font-bold text-blue-700 mb-2">Swamiji</h3>
+                                            <p class="text-blue-600 font-semibold mb-3">Spiritual Guide & Mentor</p>
+                                            <p class="text-gray-700 leading-relaxed text-sm md:text-base">Providing spiritual guidance, profound wisdom, and a strong moral foundation to our educational framework. Swamiji ensures that students not only excel in modern academics and technology but also stay deeply rooted in ethical values, community service, and holistic personal growth.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
 
         <!-- Achievements Section -->
-        <section class="py-24 bg-light fade-up">
+        <section class="py-10 bg-light fade-up">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-center mb-12 text-[#1E4ED8]">Our Achievements</h2>
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="bg-white p-6 rounded-xl text-center shadow-lg border border-blue-200">
+                    <div class="card-box text-center border border-blue-200">
                         <div class="text-4xl font-bold text-blue-600 mb-2">1st</div>
                         <p class="text-gray-700">Self-financed SSIP Grantee Institute in Kutch</p>
                     </div>
-                    <div class="bg-white p-6 rounded-xl text-center shadow-lg border border-blue-200">
+                    <div class="card-box text-center border border-blue-200">
                         <div class="text-4xl font-bold text-blue-600 mb-2">300+</div>
                         <p class="text-gray-700">Students enrolled across all programs</p>
                     </div>
-                    <div class="bg-white p-6 rounded-xl text-center shadow-lg border border-blue-200">
+                    <div class="card-box text-center border border-blue-200">
                         <div class="text-4xl font-bold text-blue-600 mb-2">15+</div>
-                        <p class="text-gray-700">Years of academic excellence</p>
+                        <p class="text-gray-700">Expert faculty members</p>
                     </div>
-                    <div class="bg-white p-6 rounded-xl text-center shadow-lg border border-blue-200">
+                    <div class="card-box text-center border border-blue-200">
                         <div class="text-4xl font-bold text-blue-600 mb-2">100%</div>
                         <p class="text-gray-700">Placement assistance provided</p>
                     </div>
@@ -208,47 +219,21 @@
             </div>
         </section>
 
-        <!-- Campus Life Section -->
-        <section class="py-24 bg-white fade-up">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-center mb-12 text-[#1E4ED8]">Campus Life</h2>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-blue-50 p-6 rounded-xl border border-blue-200">
-                        <h3 class="text-xl font-bold mb-3 text-blue-700">Academic Excellence</h3>
-                        <p class="text-gray-700">Modern classrooms, well-equipped laboratories, and digital learning resources create an optimal environment for academic growth.</p>
-                    </div>
-                    <div class="bg-blue-50 p-6 rounded-xl border border-blue-200">
-                        <h3 class="text-xl font-bold mb-3 text-blue-700">Student Activities</h3>
-                        <p class="text-gray-700">Active student clubs, cultural events, sports competitions, and technical fests ensure holistic personality development.</p>
-                    </div>
-                    <div class="bg-blue-50 p-6 rounded-xl border border-blue-200">
-                        <h3 class="text-xl font-bold mb-3 text-blue-700">Support Services</h3>
-                        <p class="text-gray-700">Career counseling, library facilities, hostel accommodation, and health services support student welfare.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white fade-up">
+        <!-- Campus Life preview -->
+        <section class="py-10 bg-white fade-up">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Join Our Academic Community</h2>
-                <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">Become part of an institution that values excellence, innovation, and student success.</p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="./contact.html" class="btn-primary px-8 py-3 rounded-lg font-semibold transition duration-300">Apply Now</a>
-                    <a href="./index.html#programs" class="btn-secondary px-8 py-3 rounded-lg font-semibold transition duration-300">Explore Programs</a>
-                </div>
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-6 text-[#1E4ED8]">Experience Campus Life</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto mb-10 text-lg">From academic seminars to cultural festivals, vibrant sports events to community service, discover what makes life at SGJ Institute unique.</p>
+                <a href="./gallery.html" class="btn-primary" aria-label="View our photo gallery">
+                    View Our Gallery
+                </a>
             </div>
         </section>
     </main>
 
     <div id="footer-placeholder"></div>
 
-    <script src="./assets/js/main.js?v=4.3"></script>
-    <script src="./assets/js/layout.js?v=4.3"></script>
+    <script src="./assets/js/main.js?v=4.4"></script>
+    <script src="./assets/js/layout.js?v=4.4"></script>
 </body>
 </html>
-
-
-
-

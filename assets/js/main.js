@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Load header and footer dynamically
     loadHeaderFooter();
+    
+    // Initialize custom interactive components
 });
 
 // Animation Functions
@@ -261,4 +263,3 @@ if (typeof initializeDarkMode === 'function') {
         initializeDarkMode();
     }
 }
-
