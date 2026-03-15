@@ -64,14 +64,14 @@ html {
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: clamp(15px, 1.2vw, 18px);
   line-height: 1.6;
   color: var(--text-primary);
   background-color: #F8FAFC !important;
   overflow-x: hidden;
-  min-height: 100vh;
+  min-height: 100dvh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
 }
 
 /* Touch-friendly interactions */
@@ -87,33 +87,21 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.75rem; }
-h4 { font-size: 1.5rem; }
-h5 { font-size: 1.25rem; }
-h6 { font-size: 1rem; }
+h1 { font-size: clamp(2rem, 3vw, 3.5rem); }
+h2 { font-size: clamp(1.75rem, 2.5vw, 2.5rem); }
+h3 { font-size: clamp(1.5rem, 2vw, 2rem); }
+h4 { font-size: clamp(1.25rem, 1.8vw, 1.75rem); }
+h5 { font-size: clamp(1.1rem, 1.5vw, 1.3rem); }
+h6 { font-size: clamp(1rem, 1.2vw, 1.1rem); }
 
 p {
   margin-bottom: 1rem;
   line-height: 1.7;
 }
 
-/* Mobile Responsive Typography */
-@media (max-width: 768px) {
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.75rem; }
-  h3 { font-size: 1.5rem; }
-  h4 { font-size: 1.25rem; }
-  h5 { font-size: 1.1rem; }
-  h6 { font-size: 1rem; }
-  
-  p { font-size: 0.95rem; }
-}
-
 /* Buttons - Academic Royal Blue Theme */
 .btn-primary {
-  min-height: 44px;
+  min-height: 48px;
   background: linear-gradient(135deg, #0B3C5D 0%, #1D70B8 100%) !important;
   color: #FFFFFF !important;
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -138,7 +126,7 @@ p {
 }
 
 .btn-secondary {
-  min-height: 44px;
+  min-height: 48px;
   background: rgba(255, 255, 255, 0.96) !important;
   color: #0B3C5D !important;
   border: 2px solid rgba(11, 60, 93, 0.18) !important;
@@ -164,7 +152,7 @@ p {
 }
 
 .btn-header {
-  min-height: 44px;
+  min-height: 48px;
   background: var(--accent) !important;
   color: #0B3C5D !important;
   border: 1px solid rgba(11, 60, 93, 0.12);
@@ -185,13 +173,13 @@ p {
 /* Mobile Button Adjustments */
 @media (max-width: 768px) {
   .btn-primary, .btn-secondary, .btn-header {
-  min-height: 44px;
+    min-height: 48px;
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
   }
   
   .btn-primary {
-  min-height: 44px;
+    min-height: 48px;
     width: 100%;
     margin-bottom: 0.5rem;
   }
@@ -229,11 +217,19 @@ p {
     border: 1px solid rgba(255, 255, 255, 0.24);
     padding: 0.5rem;
     cursor: pointer;
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
     border-radius: 0.75rem;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
     flex-shrink: 0;
+  }
+  
+  .fab-button {
+    right: 16px !important;
+    bottom: calc(70px + env(safe-area-inset-bottom)) !important;
+    width: 56px !important;
+    height: 56px !important;
+    z-index: 9999;
   }
   
   #mobile-menu-btn:hover {
@@ -272,6 +268,10 @@ p {
   #main-nav .nav-link {
     border: 1px solid rgba(255, 255, 255, 0.08);
     background: rgba(255, 255, 255, 0.1);
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   #main-nav .mobile-cta-link {
@@ -503,8 +503,14 @@ p {
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 0.75rem;
+    padding: 0 1.25rem;
   }
+}
+
+/* Base Image Responsiveness */
+img, video {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Universal Box Style Base */
