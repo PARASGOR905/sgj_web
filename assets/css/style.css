@@ -381,9 +381,9 @@ p {
 
 /* Hero Section - Enhanced for both devices */
 .hero-section {
-  padding: 6em 1rem 3em;
+  padding: 4vw 1rem;
   text-align: center;
-  min-height: 40em; /* Uses em instead of vh so container scales with text zoom */
+  min-height: auto; /* Allow content and padding to define height */
   height: auto;
   display: flex;
   align-items: center;
@@ -392,7 +392,8 @@ p {
 }
 
 .hero-home {
-  min-height: 45em; /* Scales with zoom */
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Matches exactly the 6000x3375 image size to prevent cutting */
   background:
     linear-gradient(rgba(11, 60, 93, 0.38), rgba(11, 60, 93, 0.38)),
     url('../images/SGJ%20COLLEGE.webp') center center / cover no-repeat !important; /* WebP format for better performance */
@@ -419,11 +420,13 @@ p {
 
 @media (max-width: 768px) {
   .hero-section {
-    padding: 6em 1rem 4em;
-    min-height: 40em; /* Scales with text zoom */
+    padding: 6vw 1rem;
+    min-height: auto;
   }
 
   .hero-home {
+    aspect-ratio: auto;
+    min-height: 60vh;
     background-size: cover !important;
     background-position: center center !important;
   }
