@@ -36,32 +36,7 @@
                 About
             </a>
 
-            <!-- Programs dropdown -->
-            <div class="relative group">
-                <button
-                    class="nav-link w-full md:w-auto text-white hover:text-[var(--accent)] transition-colors duration-300 px-5 py-2.5 rounded-lg hover:bg-white/10 font-semibold text-sm md:text-base flex items-center gap-1 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
-                    aria-haspopup="true" aria-expanded="false" id="programs-btn">
-                    Programs
-                    <svg class="w-4 h-4 transition-transform group-focus-within:rotate-180 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                    </svg>
-                </button>
 
-                <!-- Dropdown panel -->
-                <div id="programs-dropdown"
-                    class="md:absolute md:top-full md:left-0 mt-1 md:min-w-[180px] bg-[var(--primary)] md:bg-white md:text-gray-800 md:rounded-xl md:shadow-xl md:border md:border-blue-100 overflow-hidden hidden md:group-hover:block md:group-focus-within:block"
-                    role="menu">
-                    <a href="{{pathPrefix}}courses/bca.html"
-                       class="block px-5 py-2.5 text-white md:text-gray-700 hover:bg-white/10 md:hover:bg-blue-50 font-medium text-sm"
-                       role="menuitem">BCA — Computer Applications</a>
-                    <a href="{{pathPrefix}}courses/bba.html"
-                       class="block px-5 py-2.5 text-white md:text-gray-700 hover:bg-white/10 md:hover:bg-blue-50 font-medium text-sm"
-                       role="menuitem">BBA — Business Administration</a>
-                    <a href="{{pathPrefix}}courses/ba.html"
-                       class="block px-5 py-2.5 text-white md:text-gray-700 hover:bg-white/10 md:hover:bg-blue-50 font-medium text-sm"
-                       role="menuitem">BA — Bachelor of Arts</a>
-                </div>
-            </div>
 
             <a href="{{pathPrefix}}gallery.html"
                class="nav-link text-white hover:text-[var(--accent)] transition-colors duration-300 px-5 py-2.5 rounded-lg hover:bg-white/10 font-semibold text-sm md:text-base block">
@@ -81,25 +56,4 @@
     </div>
 </header>
 
-<script>
-// Mobile: toggle the Programs dropdown on tap (desktop uses CSS hover).
-(function () {
-    var btn      = document.getElementById('programs-btn');
-    var dropdown = document.getElementById('programs-dropdown');
-    if (!btn || !dropdown) return;
 
-    btn.addEventListener('click', function () {
-        var open = !dropdown.classList.contains('hidden');
-        dropdown.classList.toggle('hidden', open);
-        btn.setAttribute('aria-expanded', String(!open));
-    });
-
-    // Close when focus moves away.
-    document.addEventListener('click', function (e) {
-        if (!btn.contains(e.target) && !dropdown.contains(e.target)) {
-            dropdown.classList.add('hidden');
-            btn.setAttribute('aria-expanded', 'false');
-        }
-    });
-})();
-</script>
