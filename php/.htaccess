@@ -5,7 +5,7 @@
 Options -Indexes
 
 # Deny access to config and db_connect
-<FilesMatch "^(config|db_connect)\.php$">
+<FilesMatch "^(config(\.local)?|db_connect)\.php$">
     Require all denied
 </FilesMatch>
 

@@ -260,10 +260,7 @@
                                         </svg> Email
                                     </h3>
                                     <p class="text-gray-800" style="color: #374151 !important;">
-                                        <a href="mailto:info@sgjcollege.in" class="hover:underline"
-                                            style="color: #3B82F6 !important;">
-                                            info@sgjcollege.in
-                                        </a>
+                                        <a href="mailto:info@sgjcollege.in" class="hover:underline" style="color: #3B82F6 !important;">info@sgjcollege.in</a>
                                     </p>
                                 </div>
 
@@ -308,7 +305,7 @@
                             </svg>
                         </div>
                         <h3 class="text-xl font-bold mb-2">Quick Response</h3>
-                        <p class="text-gray-600">We respond to all enquiries at 9 to 6 on working days.</p>
+                        <p class="text-gray-600">We respond to all enquiries at 9 to 5 on working days.</p>
                     </div>
                     <div class="text-center hover-lift fade-up">
                         <div
@@ -555,26 +552,23 @@
                     return result;
                 })
                 .then(result => {
+                    // If the server returns a fresh token, update it immediately
+                    // so the user can retry without a page reload (fixes stale-token bug).
+                    if (result.token) {
+                        document.getElementById('csrf_token').value = result.token;
+                    }
+
                     if (result.status === 'success') {
-                        // Redirect to thank-you page after successful submission
-                        setTimeout(() => {
-                            window.location.href = 'thank-you.html';
-                        }, 1500); // Delay to show success message before redirect
-
-                        // Add success checkmark animation
-                        msg.innerHTML = '<div class="flex items-center justify-center"><svg class="w-5 h-5 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>' + (result.message || 'Enquiry submitted successfully! Redirecting to thank you page...') + '</div>';
+                        msg.innerHTML = '<div class="flex items-center justify-center"><svg class="w-5 h-5 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>' + (result.message || 'Enquiry submitted successfully! Redirecting...') + '</div>';
                         msg.className = 'text-center mt-4 text-green-600 flex items-center justify-center';
-
-                        // Refresh CSRF token after successful submission (include credentials)
-                        loadCsrfToken()
-                            .catch(error => console.error('Error getting new CSRF token:', error));
+                        setTimeout(() => { window.location.href = 'thank-you.html'; }, 1500);
                     } else {
                         msg.textContent = result.message || 'There was an error submitting your enquiry. Please try again.';
                         msg.className = 'text-center mt-4 text-red-600';
-
-                        // Refresh CSRF token after error to prevent repeated attacks (include credentials)
-                        loadCsrfToken()
-                            .catch(error => console.error('Error getting new CSRF token:', error));
+                        // If no token in response, fall back to fetching a new one.
+                        if (!result.token) {
+                            loadCsrfToken().catch(err => console.error('CSRF refresh failed:', err));
+                        }
                     }
                 })
                 .catch(error => {
@@ -595,12 +589,4 @@
                 })
                 .finally(() => {
                     // Reset button state
-                    btnText.textContent = 'Submit Enquiry';
-                    btnLoading.classList.add('hidden');
-                    submitBtn.disabled = false;
-                });
-        });
-    </script>
-</body>
-
-</html>
+                    btnText.textContent 

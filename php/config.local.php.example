@@ -1,0 +1,8 @@
+<?php
+// Local development overrides. This file is ignored by git.
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'sgj_college');
+define('DB_USER', 'sgj_user');
+define('DB_PASS', 'CHANGE_ME_BEFORE_USE');
+define('DB_PORT', 3306);
+?>

@@ -1,0 +1,23 @@
+# SGJ Institute - php/ directory .htaccess
+# Place this file inside the php/ folder
+
+# ─── Directory listing ────────────────────────────────────────────────────────
+Options -Indexes
+
+# ─── Deny access to ALL files by default ─────────────────────────────────────
+Require all denied
+
+# ─── Allow only the three public-facing PHP endpoints ─────────────────────────
+<FilesMatch "^(contact_process|download_handler|get_csrf_token)\.php$">
+    Require all granted
+</FilesMatch>
+
+# ─── Block all log, text, JSON, and backup files ──────────────────────────────
+<FilesMatch "\.(txt|log|jsonl|json|sql|bak|env)$">
+    Require all denied
+</FilesMatch>
+
+# ─── Prevent access to dot-files ──────────────────────────────────────────────
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>

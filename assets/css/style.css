@@ -383,8 +383,7 @@ p {
 .hero-section {
   padding: 4vw 1rem;
   text-align: center;
-  min-height: auto; /* Allow content and padding to define height */
-  height: auto;
+  min-height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -393,10 +392,10 @@ p {
 
 .hero-home {
   width: 100%;
-  aspect-ratio: 16 / 9; /* Matches exactly the 6000x3375 image size to prevent cutting */
+  aspect-ratio: 16 / 9;
   background:
     linear-gradient(rgba(11, 60, 93, 0.38), rgba(11, 60, 93, 0.38)),
-    url('../images/SGJ%20COLLEGE.webp') center center / cover no-repeat !important; /* WebP format for better performance */
+    url('../images/SGJ%20COLLEGE.webp') center center / cover no-repeat !important;
   background-color: #0B3C5D !important;
 }
 
@@ -1438,6 +1437,74 @@ footer a:hover {
   animation: scroll-marquee 25s linear infinite;
 }
 
+.leadership-marquee {
+  padding: 0.5rem 0 1rem;
+  mask-image: none;
+  -webkit-mask-image: none;
+}
+
+.leadership-track {
+  gap: 1.5rem;
+  align-items: stretch;
+  will-change: transform;
+  animation: slideLeadership 28s linear infinite !important;
+}
+
+.leadership-slide {
+  width: min(92vw, 700px);
+  flex: 0 0 auto;
+}
+
+.leadership-card {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  border: 1px solid rgba(29, 112, 184, 0.14) !important;
+  box-shadow: 0 18px 36px rgba(11, 60, 93, 0.08) !important;
+}
+
+.leadership-card-body {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  min-height: 100%;
+}
+
+.leadership-photo {
+  width: 7.5rem;
+  height: 7.5rem;
+  flex: 0 0 auto;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(11, 60, 93, 0.12);
+  box-shadow: 0 8px 18px rgba(11, 60, 93, 0.08);
+}
+
+.leadership-copy {
+  flex: 1;
+  text-align: left;
+}
+
+.leadership-name {
+  margin-bottom: 0.35rem;
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  color: #0b3c5d !important;
+}
+
+.leadership-role {
+  margin-bottom: 0.9rem;
+  color: #1d70b8 !important;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.leadership-text {
+  margin-bottom: 0;
+  color: #4b5563 !important;
+  line-height: 1.8;
+  font-size: 0.98rem;
+}
+
 @keyframes scroll-marquee {
   0% {
     transform: translateX(0);
@@ -1445,6 +1512,31 @@ footer a:hover {
   100% {
     /* Translate exactly half the width to seamlessly loop since content is doubled */
     transform: translateX(-50%);
+  }
+}
+
+@keyframes slideLeadership {
+  0% { transform: translateX(100vw); }
+  100% { transform: translateX(-100%); }
+}
+
+@media (max-width: 768px) {
+  .leadership-slide {
+    width: min(90vw, 400px);
+  }
+
+  .leadership-card-body {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .leadership-copy {
+    text-align: center;
+  }
+
+  .leadership-photo {
+    width: 6.5rem;
+    height: 6.5rem;
   }
 }
 

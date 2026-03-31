@@ -34,7 +34,7 @@
 </IfModule>
 
 # Protect only most sensitive files
-<FilesMatch "^(config\.php|\.htaccess)$">
+<FilesMatch "^(config(\.local)?\.php|\.htaccess)$">
     Order allow,deny
     Deny from all
 </FilesMatch>

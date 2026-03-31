@@ -23,8 +23,13 @@ if (!defined('DB_PASS')) {
 if (!defined('DB_PORT')) {
     define('DB_PORT', (int) (getenv('DB_PORT') ?: 3306));
 }
+
+// Fallback enquiry file — stored TWO levels above the web root so it is never
+// accessible via HTTP. Adjust the path if your server layout differs.
+// Structure assumed:  /home/user/private/          ← outside web root
+//                     /home/user/public_html/php/  ← __DIR__ here
 if (!defined('ENQUIRY_FALLBACK_FILE')) {
-    define('ENQUIRY_FALLBACK_FILE', __DIR__ . '/enquiries_fallback.jsonl');
+    define('ENQUIRY_FALLBACK_FILE', dirname(__DIR__, 3) . '/private/enquiries_fallback.jsonl');
 }
 
 // Site Configuration
@@ -38,16 +43,28 @@ if (!defined('SITE_NAME')) {
 // Security Configuration
 if (!defined('ALLOWED_ORIGINS')) {
     define('ALLOWED_ORIGINS', [
+        'https://sgjgroup.org',
+        'https://www.sgjgroup.org',
         'https://sgjcollege.in',
         'https://www.sgjcollege.in',
         'http://localhost',
-        'http://127.0.0.1'
+        'http://127.0.0.1',
+        'http://localhost:8000',
+        'http://127.0.0.1:8000',
     ]);
 }
 
 // Rate Limiting
 if (!defined('RATE_LIMIT_SECONDS')) {
     define('RATE_LIMIT_SECONDS', 30);
+}
+
+// Download rate limiting (per IP, per file, per window)
+if (!defined('DOWNLOAD_RATE_LIMIT_COUNT')) {
+    define('DOWNLOAD_RATE_LIMIT_COUNT', 10);   // max downloads
+}
+if (!defined('DOWNLOAD_RATE_LIMIT_WINDOW')) {
+    define('DOWNLOAD_RATE_LIMIT_WINDOW', 60);  // per this many seconds
 }
 
 // Input Validation Limits
